@@ -1,1 +1,958 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Reparación especializada de headsets aeronáuticos RTV."
+  >
+
+  <title>RTV | Reparación de Headsets Aeronáuticos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+
+    <nav class="nav container">
+
+      <a href="#inicio" class="brand" aria-label="RTV inicio">
+
+        <img
+          src="assets/LOGO RTV.png"
+          alt="RTV Servicios Electrónicos"
+        >
+
+        <span>
+          <strong>RTV</strong>
+
+          <small>
+            Servicio técnico especializado<br>
+            en equipos aeronáuticos
+          </small>
+        </span>
+
+      </a>
+
+      <a
+        class="btn btn-whatsapp btn-outline"
+        href="https://wa.me/51946204472"
+        target="_blank"
+        rel="noopener"
+      >
+        ◉ Escríbenos por WhatsApp
+      </a>
+
+    </nav>
+
+    <div class="hero-content container">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          Servicio técnico especializado
+        </p>
+
+        <h1>
+          REPARACIÓN ESPECIALIZADA DE
+
+          <span>
+            HEADSETS <b>AERONÁUTICOS</b>
+          </span>
+        </h1>
+
+        <h2>
+          Calidad, precisión y seguridad para cada vuelo.
+        </h2>
+
+        <p>
+          Reparamos, diagnosticamos y damos mantenimiento a
+          headsets aeronáuticos de piloto y tripulación con los
+          más altos estándares técnicos.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20solicitar%20un%20diagnóstico"
+            target="_blank"
+            rel="noopener"
+          >
+            ◉ Solicitar diagnóstico
+          </a>
+
+          <a
+            class="btn btn-dark"
+            href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20cotizar%20una%20reparación"
+            target="_blank"
+            rel="noopener"
+          >
+            ◉ Cotizar por WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-benefits">
+
+      <div class="container benefit-grid">
+
+        <article>
+          <img
+            src="assets/especialistas en equipos aeronáuticos HERO.png"
+            alt="Especialistas en equipos aeronáuticos"
+          >
+
+          <span>
+            Especialistas en<br>
+            equipos aeronáuticos
+          </span>
+        </article>
+
+        <article>
+          <img
+            src="assets/Reparaciones con garantía HERO.png"
+            alt="Reparaciones con garantía"
+          >
+
+          <span>
+            Reparaciones<br>
+            con garantía
+          </span>
+        </article>
+
+        <article>
+          <img
+            src="assets/componentes de alta calidad HERO.png"
+            alt="Componentes de alta calidad"
+          >
+
+          <span>
+            Componentes<br>
+            de alta calidad
+          </span>
+        </article>
+
+        <article>
+          <img
+            src="assets/cumplimos estándares de seguridad aérea HERO.png"
+            alt="Estándares de seguridad aérea"
+          >
+
+          <span>
+            Cumplimos estándares<br>
+            de seguridad aérea
+          </span>
+        </article>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- MARCAS -->
+    <section class="section brands">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          TRABAJAMOS CON LAS
+          <span>PRINCIPALES MARCAS</span>
+        </h2>
+
+        <div class="brand-grid">
+
+          <img
+            src="assets/LOGO DE BOSE.png"
+            alt="Bose"
+          >
+
+          <img
+            src="assets/dclark-logo.png"
+            alt="David Clark"
+          >
+
+          <img
+            src="assets/LOGO LIGHTSPEED AVIATION.png"
+            alt="Lightspeed Aviation"
+          >
+
+          <img
+            src="assets/LOGO TELEX.png"
+            alt="Telex"
+          >
+
+          <div class="pilot-logo">
+            PILOT
+            <small>COMMUNICATIONS USA</small>
+          </div>
+
+          <img
+            src="assets/LOGO DE SENNHEISER AVIATION.png"
+            alt="Sennheiser Aviation"
+          >
+
+        </div>
+
+        <p class="legal-note">
+          * No somos distribuidores autorizados. RTV Servicios
+          Electrónicos es un servicio técnico independiente.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- FALLAS -->
+    <section class="section failures">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          SOLUCIONAMOS LAS
+          <span>FALLAS MÁS COMUNES</span>
+        </h2>
+
+        <div class="failure-grid">
+
+          <article>
+            <img
+              src="assets/NO SE ESCUCHA O VOLUMEN BAJO FALLAS MAS COMUNES.png"
+              alt="No se escucha o volumen bajo"
+            >
+
+            <p>
+              No se escucha<br>
+              o volumen bajo
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/MICRÓFONO NO TRANSMITE FALLAS COMUNES.png"
+              alt="Micrófono no transmite"
+            >
+
+            <p>
+              Micrófono no<br>
+              transmite
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+              alt="Cable dañado o cortado"
+            >
+
+            <p>
+              Cable dañado<br>
+              o cortado
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/CONECTOR U-174 FALLAS COMUNES.png"
+              alt="Conector U-174 averiado"
+            >
+
+            <p>
+              Conector U-174<br>
+              averiado
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/RUIDO O ESTATICA EN LA COMUNICACIÓN FALLAS COMUNES.png"
+              alt="Ruido o estática"
+            >
+
+            <p>
+              Ruido o estática<br>
+              en la comunicación
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/AURICULARES DAÑADOS O SIN SONIDO FALLAS COMUNES.png"
+              alt="Auriculares dañados"
+            >
+
+            <p>
+              Auriculares dañados<br>
+              o sin sonido
+            </p>
+          </article>
+
+          <article>
+            <img
+              src="assets/DIADEMA ROTA O SUELTE FALLAS COMUNES.png"
+              alt="Diadema rota o suelta"
+            >
+
+            <p>
+              Diadema rota<br>
+              o suelta
+            </p>
+          </article>
+
+          <article class="fallback-icon">
+
+            <span>⇵</span>
+
+            <p>
+              Fallas en PTT o<br>
+              conexiones
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section services" id="servicios">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          NUESTROS <span>SERVICIOS</span>
+        </h2>
+
+        <div class="service-grid">
+
+          <article>
+
+            <img
+              src="assets/DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
+              alt="Diagnóstico técnico especializado"
+            >
+
+            <div>
+              <h3>
+                Diagnóstico técnico especializado
+              </h3>
+
+              <p>
+                Revisión completa del equipo con instrumentos de precisión.
+              </p>
+            </div>
+
+          </article>
+
+          <article>
+
+            <img
+              src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+              alt="Reparación electrónica"
+            >
+
+            <div>
+              <h3>
+                Reparación electrónica
+              </h3>
+
+              <p>
+                Reparamos a nivel de componente.
+              </p>
+            </div>
+
+          </article>
+
+          <article>
+
+            <img
+              src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+              alt="Cambio de cable y conectores"
+            >
+
+            <div>
+              <h3>
+                Cambio de cable y conectores
+              </h3>
+
+              <p>
+                Usamos repuestos de alta calidad y compatibilidad.
+              </p>
+            </div>
+
+          </article>
+
+          <article>
+
+            <img
+              src="assets/CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
+              alt="Cambio de almohadillas y espumas"
+            >
+
+            <div>
+              <h3>
+                Cambio de almohadillas y espumas
+              </h3>
+
+              <p>
+                Mejoramos el confort y el sellado acústico.
+              </p>
+            </div>
+
+          </article>
+
+          <article>
+
+            <img
+              src="assets/CAMBIO DE MICRÓFONO Y CAPSULA NUESTROS SERVICIOS.png"
+              alt="Cambio de micrófono y cápsulas"
+            >
+
+            <div>
+              <h3>
+                Cambio de micrófono y cápsulas
+              </h3>
+
+              <p>
+                Micrófonos originales o de alta fidelidad.
+              </p>
+            </div>
+
+          </article>
+
+          <article>
+
+            <img
+              src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+              alt="Mantenimiento preventivo"
+            >
+
+            <div>
+              <h3>
+                Mantenimiento preventivo
+              </h3>
+
+              <p>
+                Prolonga la vida útil del equipo y asegura su rendimiento.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- POR QUÉ ELEGIR RTV -->
+    <section class="why">
+
+      <div class="container">
+
+        <h2 class="section-title light">
+          ¿POR QUÉ ELEGIR <span>RTV</span>?
+        </h2>
+
+        <div class="why-grid">
+
+          <article>
+            <div class="line-icon">▣</div>
+
+            <p>
+              Especialización en<br>
+              equipos aeronáuticos
+            </p>
+          </article>
+
+          <article>
+            <div class="line-icon">▤</div>
+
+            <p>
+              Técnicos capacitados<br>
+              en estándares de aviación
+            </p>
+          </article>
+
+          <article>
+            <div class="line-icon">✹</div>
+
+            <p>
+              Repuestos de alta<br>
+              calidad y compatibilidad
+            </p>
+          </article>
+
+          <article>
+            <div class="line-icon">◎</div>
+
+            <p>
+              Garantía en todas<br>
+              nuestras reparaciones
+            </p>
+          </article>
+
+          <article>
+            <div class="line-icon">◉</div>
+
+            <p>
+              Atención rápida y<br>
+              asesoría profesional
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section process">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          NUESTRO <span>PROCESO</span> DE ATENCIÓN
+        </h2>
+
+        <div class="process-grid">
+
+          <article>
+            <b>1</b>
+            <span>◉</span>
+
+            <h3>Contáctanos</h3>
+
+            <p>
+              Cuéntanos la falla o envíanos fotos.
+            </p>
+          </article>
+
+          <i>→</i>
+
+          <article>
+            <b>2</b>
+            <span>▤</span>
+
+            <h3>Diagnóstico</h3>
+
+            <p>
+              Evaluamos tu headset y detectamos el problema.
+            </p>
+          </article>
+
+          <i>→</i>
+
+          <article>
+            <b>3</b>
+            <span>▧</span>
+
+            <h3>Cotización</h3>
+
+            <p>
+              Te enviamos el presupuesto sin compromiso.
+            </p>
+          </article>
+
+          <i>→</i>
+
+          <article>
+            <b>4</b>
+            <span>🛠</span>
+
+            <h3>Reparación</h3>
+
+            <p>
+              Realizamos la reparación con repuestos de calidad.
+            </p>
+          </article>
+
+          <i>→</i>
+
+          <article>
+            <b>5</b>
+            <span>✓</span>
+
+            <h3>Pruebas</h3>
+
+            <p>
+              Verificamos el correcto funcionamiento.
+            </p>
+          </article>
+
+          <i>→</i>
+
+          <article>
+            <b>6</b>
+            <span>◇</span>
+
+            <h3>Entrega</h3>
+
+            <p>
+              Te entregamos tu equipo listo para volar.
+            </p>
+          </article>
+
+        </div>
+
+        <h2 class="section-title examples-title">
+          EJEMPLOS DE <span>REPARACIONES</span>
+        </h2>
+
+        <div class="gallery">
+
+          <img
+            src="assets/DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
+            alt="Ejemplo de diagnóstico"
+          >
+
+          <img
+            src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+            alt="Ejemplo de reparación"
+          >
+
+          <img
+            src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+            alt="Ejemplo de reparación electrónica"
+          >
+
+          <img
+            src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+            alt="Ejemplo de reparación de cable"
+          >
+
+          <img
+            src="assets/CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
+            alt="Cambio de almohadillas"
+          >
+
+          <img
+            src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+            alt="Mantenimiento preventivo"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="audience">
+
+      <div class="container">
+
+        <h2 class="section-title light">
+          ¿A QUIÉNES <span>ATENDEMOS</span>?
+        </h2>
+
+        <div class="audience-grid">
+
+          <article>
+            <div>♙</div>
+
+            <p>
+              Pilotos<br>
+              <small>privados y comerciales</small>
+            </p>
+          </article>
+
+          <article>
+            <div>◇</div>
+
+            <p>
+              Escuelas de<br>
+              <small>aviación</small>
+            </p>
+          </article>
+
+          <article>
+            <div>✈</div>
+
+            <p>
+              Aerolíneas y<br>
+              <small>operadores aéreos</small>
+            </p>
+          </article>
+
+          <article>
+            <div>🛠</div>
+
+            <p>
+              Talleres y centros<br>
+              <small>de mantenimiento</small>
+            </p>
+          </article>
+
+          <article>
+            <div>⬡</div>
+
+            <p>
+              Fuerzas armadas<br>
+              <small>y organismos</small>
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="section faq" id="preguntas">
+
+      <div class="container">
+
+        <h2 class="section-title">
+          PREGUNTAS <span>FRECUENTES</span>
+        </h2>
+
+        <div class="faq-grid">
+
+          <details>
+            <summary>
+              ¿Cuánto tiempo demora la reparación?
+            </summary>
+
+            <p>
+              El tiempo depende de la falla y de la disponibilidad
+              de repuestos. Después del diagnóstico te indicamos el
+              plazo estimado.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Pueden recoger y entregar el equipo?
+            </summary>
+
+            <p>
+              Coordinamos el recojo y la entrega según la ubicación.
+              Escríbenos para confirmar cobertura y costo.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Tienen garantía las reparaciones?
+            </summary>
+
+            <p>
+              Sí. La garantía aplica sobre el trabajo realizado y
+              los repuestos instalados según las condiciones de la
+              cotización.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Qué tipo de conector utilizan los headsets aeronáuticos?
+            </summary>
+
+            <p>
+              Trabajamos con conectores aeronáuticos comunes,
+              incluyendo doble plug y U-174, entre otros.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Reparan todas las marcas de headsets aeronáuticos?
+            </summary>
+
+            <p>
+              Atendemos las principales marcas del mercado. La
+              evaluación previa confirma la viabilidad de reparación.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              ¿Realizan mantenimiento preventivo?
+            </summary>
+
+            <p>
+              Sí. Incluye inspección, limpieza técnica, revisión de
+              cableado, conectores, almohadillas, micrófono y pruebas
+              funcionales.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div class="container cta-inner">
+
+        <div class="cta-image">
+          <img
+            src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+            alt="Headset aeronáutico"
+          >
+        </div>
+
+        <div>
+          <h2>
+            TU COMUNICACIÓN, NUESTRA PRIORIDAD
+          </h2>
+
+          <p>
+            Mantén tu headset en óptimas condiciones<br>
+            y vuela con seguridad.
+          </p>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20solicitar%20un%20diagnóstico"
+          target="_blank"
+          rel="noopener"
+        >
+          ◉ Solicitar diagnóstico por WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <img
+          src="assets/LOGO RTV.png"
+          alt="RTV Servicios Electrónicos"
+        >
+
+        <p>
+          SERVICIO TÉCNICO ESPECIALIZADO<br>
+          EN EQUIPOS AERONÁUTICOS
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Contacto</h3>
+
+        <p>◉ WhatsApp: 946 204 472</p>
+
+        <p>
+          ◷ Lunes a Viernes: 9:00 am - 6:00 pm
+        </p>
+
+        <p>
+          ✉ info@rtvservicioselectronicos.com
+        </p>
+
+        <p>⌖ Lima, Perú</p>
+
+      </div>
+
+      <div>
+
+        <h3>Enlaces rápidos</h3>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#servicios">Servicios</a>
+
+        <a href="#preguntas">Preguntas frecuentes</a>
+
+        <a
+          href="https://wa.me/51946204472"
+          target="_blank"
+          rel="noopener"
+        >
+          Contacto
+        </a>
+
+      </div>
+
+      <div>
+
+        <h3>Aviso legal</h3>
+
+        <p>
+          RTV Servicios Electrónicos es un servicio técnico
+          independiente. No estamos afiliados ni autorizados por
+          las marcas mencionadas. Las marcas registradas pertenecen
+          a sus respectivos propietarios.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+
+      <span>
+        © 2026 RTV Servicios Electrónicos. Todos los derechos reservados.
+      </span>
+
+      <span>
+        Facebook&nbsp;&nbsp; Instagram&nbsp;&nbsp; WhatsApp
+      </span>
+
+    </div>
+
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a
+    class="floating-wa"
+    href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20información%20sobre%20la%20reparación%20de%20mi%20headset"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    ◉
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
