@@ -782,17 +782,50 @@
     }
 
     .icono-elegir {
-      width: 55px;
-      height: 55px;
-      margin: 0 auto 10px;
-      display: grid;
-      place-items: center;
-      color: #ffffff;
-      border: 2px solid var(--rojo);
-      border-radius: 50%;
-      font-size: 25px;
-    }
+  width: 96px;
+  height: 96px;
 
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--rojo);
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.02);
+
+  transition:
+      transform .30s ease,
+      box-shadow .30s ease,
+      border-color .30s ease;
+}
+
+.icono-elegir img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 4px rgba(82,180,255,.30))
+        drop-shadow(0 0 7px rgba(255,48,68,.20));
+
+    transition:transform .30s ease;
+}
+
+.opcion-elegir:hover .icono-elegir{
+    transform:translateY(-4px);
+    border-color:#ff4a5b;
+
+    box-shadow:
+        0 0 18px rgba(255,52,72,.20),
+        inset 0 0 16px rgba(255,52,72,.10);
+}
+
+.opcion-elegir:hover .icono-elegir img{
+    transform:scale(1.08);
+}
     /* PROCESO */
 
     .proceso {
@@ -1813,58 +1846,73 @@ footer {
 
           <article class="opcion-elegir">
 
-            <div class="icono-elegir">
-              ▣
-            </div>
+    <div class="icono-elegir">
+        <img
+            src="./ESPECIALIZACIÓN ELEGIR.png"
+            alt="Especialización en equipos aeronáuticos"
+        >
+    </div>
 
-            Especialización en<br>
-            equipos aeronáuticos
+    Especialización en<br>
+    equipos aeronáuticos
 
-          </article>
-
-          <article class="opcion-elegir">
-
-            <div class="icono-elegir">
-              ▤
-            </div>
-
-            Técnicos capacitados<br>
-            en estándares de aviación
-
-          </article>
+</article>
 
           <article class="opcion-elegir">
 
-            <div class="icono-elegir">
-              ✹
-            </div>
+    <div class="icono-elegir">
+        <img
+            src="./TÉCNICOS ELEGIR.png"
+            alt="Técnicos capacitados"
+        >
+    </div>
 
-            Repuestos de alta<br>
-            calidad y compatibilidad
+    Técnicos capacitados<br>
+    en estándares de aviación
 
-          </article>
-
-          <article class="opcion-elegir">
-
-            <div class="icono-elegir">
-              ◎
-            </div>
-
-            Garantía en todas<br>
-            nuestras reparaciones
-
-          </article>
+</article>
 
           <article class="opcion-elegir">
 
-            <div class="icono-elegir">
-              ◉
-            </div>
+    <div class="icono-elegir">
+        <img
+            src="./REPUESTO ELEGIR.png"
+            alt="Repuestos de alta calidad"
+        >
+    </div>
 
-            Atención rápida y<br>
-            asesoría profesional
+    Repuestos de alta<br>
+    calidad y compatibilidad
 
-          </article>
+</article>
+
+          <article class="opcion-elegir">
+
+    <div class="icono-elegir">
+        <img
+            src="./GARANTÍA ELEGIR.png"
+            alt="Garantía"
+        >
+    </div>
+
+    Garantía en todas<br>
+    nuestras reparaciones
+
+</article>
+
+          <article class="opcion-elegir">
+
+    <div class="icono-elegir">
+        <img
+            src="./ATENCIÓN ELEGIR.png"
+            alt="Atención rápida"
+        >
+    </div>
+
+    Atención rápida y<br>
+    asesoría profesional
+
+</article>
 
         </div>
 
