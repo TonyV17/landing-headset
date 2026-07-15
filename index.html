@@ -1,86 +1,1008 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <meta
     name="description"
-    content="Reparación especializada de headsets aeronáuticos RTV."
+    content="RTV Servicios Electrónicos. Reparación especializada de headsets aeronáuticos."
   >
 
   <title>RTV | Reparación de Headsets Aeronáuticos</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    :root {
+      --azul: #061a2e;
+      --azul-medio: #092844;
+      --rojo: #e5252b;
+      --verde: #19b85b;
+      --blanco: #ffffff;
+      --texto: #172235;
+      --gris: #697586;
+      --fondo: #f8fafc;
+      --borde: #e0e6ed;
+      --sombra: 0 7px 20px rgba(6, 27, 49, 0.11);
+    }
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+    * {
+      box-sizing: border-box;
+    }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <link rel="stylesheet" href="styles.css">
+    body {
+      margin: 0;
+      color: var(--texto);
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contenedor {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .seccion {
+      padding: 42px 0;
+    }
+
+    .titulo-seccion {
+      margin: 0 0 30px;
+      text-align: center;
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .titulo-seccion span {
+      color: var(--rojo);
+    }
+
+    .titulo-blanco {
+      color: #ffffff;
+    }
+
+    /* BOTONES */
+
+    .boton {
+      min-height: 48px;
+      padding: 13px 23px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      border: 1px solid transparent;
+      border-radius: 5px;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .boton:hover {
+      transform: translateY(-2px);
+    }
+
+    .boton-rojo {
+      color: #ffffff;
+      background: var(--rojo);
+    }
+
+    .boton-rojo:hover {
+      box-shadow: 0 9px 25px rgba(229, 37, 43, 0.36);
+    }
+
+    .boton-oscuro {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.88);
+      background: rgba(3, 17, 31, 0.65);
+    }
+
+    .boton-verde {
+      color: #ffffff;
+      border-color: var(--verde);
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    .icono-wa {
+      width: 20px;
+      height: 20px;
+
+      display: inline-grid;
+      place-items: center;
+
+      border: 2px solid currentColor;
+      border-radius: 50%;
+
+      font-size: 10px;
+    }
+
+    /* HERO */
+
+    .hero {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3, 18, 33, 0.99) 0%,
+          rgba(3, 18, 33, 0.96) 42%,
+          rgba(3, 18, 33, 0.49) 67%,
+          rgba(3, 18, 33, 0.11) 100%
+        ),
+        url("./imagen de fondo para landingheadset.png")
+        center center / cover no-repeat;
+    }
+
+    .navegacion {
+      min-height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .marca img {
+      width: 115px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .marca-texto {
+      padding-left: 17px;
+      border-left: 1px solid rgba(255, 255, 255, 0.32);
+
+      font-size: 11px;
+      line-height: 1.4;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .contenido-hero {
+      min-height: 400px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .texto-hero {
+      width: min(630px, 100%);
+      padding: 34px 0 70px;
+    }
+
+    .texto-hero h1 {
+      margin: 0;
+
+      font-size: 29px;
+      line-height: 1.08;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .texto-hero h1 strong {
+      display: block;
+      margin-top: 7px;
+
+      font-size: 47px;
+      line-height: 1.02;
+      font-weight: 900;
+    }
+
+    .texto-hero h1 strong span {
+      color: var(--rojo);
+    }
+
+    .texto-hero h2 {
+      margin: 13px 0;
+
+      font-size: 19px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .texto-hero p {
+      max-width: 560px;
+      margin: 0;
+
+      color: #e2e9f1;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .acciones-hero {
+      margin-top: 29px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* BENEFICIOS */
+
+    .barra-beneficios {
+      background: rgba(5, 29, 51, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .rejilla-beneficios {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .beneficio {
+      min-height: 92px;
+      padding: 14px 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+
+      border-right: 1px solid rgba(255, 255, 255, 0.13);
+
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .beneficio:last-child {
+      border-right: 0;
+    }
+
+    .beneficio img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    /* MARCAS */
+
+    .marcas {
+      background: #ffffff;
+    }
+
+    .rejilla-marcas {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      gap: 28px;
+    }
+
+    .rejilla-marcas img {
+      width: 100%;
+      height: 57px;
+      object-fit: contain;
+    }
+
+    .logo-pilot {
+      color: #1e2630;
+      text-align: center;
+      font-size: 27px;
+      line-height: 1;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .logo-pilot small {
+      display: block;
+      margin-top: 2px;
+
+      font-size: 7px;
+      font-style: normal;
+      letter-spacing: 0.06em;
+    }
+
+    .aviso-marcas {
+      margin: 19px 0 0;
+
+      color: #7b8490;
+      text-align: center;
+      font-size: 9px;
+    }
+
+    /* FALLAS */
+
+    .fallas {
+      background: #fafbfd;
+    }
+
+    .rejilla-fallas {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 13px;
+    }
+
+    .tarjeta-falla {
+      min-height: 132px;
+      padding: 13px 8px;
+
+      border: 1px solid var(--borde);
+      border-radius: 7px;
+
+      background: #ffffff;
+      box-shadow: 0 4px 13px rgba(7, 30, 54, 0.07);
+
+      text-align: center;
+    }
+
+    .tarjeta-falla img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 7px;
+      object-fit: contain;
+    }
+
+    .tarjeta-falla p {
+      margin: 0;
+
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .icono-ptt {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 7px;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--azul);
+      font-size: 38px;
+      font-weight: 900;
+    }
+
+    /* SERVICIOS */
+
+    .servicios {
+      padding-top: 23px;
+      background: #ffffff;
+    }
+
+    .rejilla-servicios {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .servicio {
+      overflow: hidden;
+
+      border: 1px solid var(--borde);
+      border-radius: 7px;
+
+      background: #ffffff;
+      box-shadow: var(--sombra);
+    }
+
+    .servicio img {
+      width: 100%;
+      height: 142px;
+      object-fit: cover;
+    }
+
+    .servicio-contenido {
+      min-height: 124px;
+      padding: 13px 11px 16px;
+      text-align: center;
+    }
+
+    .servicio h3 {
+      margin: 0 0 8px;
+
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .servicio p {
+      margin: 0;
+
+      color: var(--gris);
+      font-size: 9px;
+      line-height: 1.45;
+    }
+
+    /* POR QUÉ ELEGIR */
+
+    .elegir {
+      padding: 35px 0;
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 24, 43, 0.95),
+          rgba(5, 38, 66, 0.91)
+        ),
+        url("./imagen de fondo con avión.png")
+        left center / cover no-repeat;
+    }
+
+    .rejilla-elegir {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 26px;
+      text-align: center;
+    }
+
+    .opcion-elegir {
+      font-size: 10px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .icono-elegir {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 10px;
+
+      display: grid;
+      place-items: center;
+
+      color: #ffffff;
+      border: 2px solid var(--rojo);
+      border-radius: 50%;
+
+      font-size: 25px;
+    }
+
+    /* PROCESO */
+
+    .proceso {
+      background: #ffffff;
+    }
+
+    .rejilla-proceso {
+      display: grid;
+      grid-template-columns:
+        1fr auto 1fr auto 1fr auto
+        1fr auto 1fr auto 1fr;
+
+      align-items: center;
+      gap: 9px;
+    }
+
+    .paso {
+      position: relative;
+
+      min-height: 155px;
+      padding: 25px 11px 13px;
+
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+
+      background: #ffffff;
+      box-shadow: 0 4px 14px rgba(6, 29, 52, 0.07);
+
+      text-align: center;
+    }
+
+    .numero-paso {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+
+      width: 28px;
+      height: 28px;
+
+      display: grid;
+      place-items: center;
+
+      color: #ffffff;
+      background: var(--rojo);
+      border-radius: 50%;
+
+      font-size: 12px;
+      font-weight: 900;
+
+      transform: translateX(-50%);
+    }
+
+    .icono-paso {
+      display: block;
+      margin: 6px 0 9px;
+
+      color: var(--azul);
+      font-size: 30px;
+    }
+
+    .paso h3 {
+      margin: 0 0 7px;
+      font-size: 11px;
+    }
+
+    .paso p {
+      margin: 0;
+
+      color: var(--gris);
+      font-size: 8px;
+      line-height: 1.45;
+    }
+
+    .flecha {
+      color: var(--azul);
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .titulo-ejemplos {
+      margin-top: 32px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 113px;
+
+      border-radius: 6px;
+
+      object-fit: cover;
+      box-shadow: var(--sombra);
+    }
+
+    /* CLIENTES */
+
+    .clientes {
+      padding: 36px 0;
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 25, 45, 0.98),
+          rgba(4, 25, 45, 0.76)
+        ),
+        url("./imagen de fondo con avión.png")
+        right center / cover no-repeat;
+    }
+
+    .rejilla-clientes {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      text-align: center;
+    }
+
+    .cliente-icono {
+      margin-bottom: 8px;
+
+      color: var(--rojo);
+      font-size: 39px;
+      line-height: 1;
+    }
+
+    .cliente p {
+      margin: 0;
+
+      font-size: 12px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .cliente small {
+      font-size: 9px;
+      font-weight: 500;
+    }
+
+    /* PREGUNTAS */
+
+    .preguntas {
+      background: #fbfcfe;
+    }
+
+    .rejilla-preguntas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px 20px;
+    }
+
+    .pregunta {
+      padding: 0 18px;
+
+      border: 1px solid var(--borde);
+      border-radius: 5px;
+
+      background: #ffffff;
+    }
+
+    .pregunta summary {
+      position: relative;
+
+      padding: 14px 27px 14px 0;
+
+      cursor: pointer;
+      list-style: none;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .pregunta summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .pregunta summary::after {
+      content: "⌄";
+
+      position: absolute;
+      top: 12px;
+      right: 0;
+
+      font-size: 18px;
+      transition: transform 0.2s ease;
+    }
+
+    .pregunta[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .pregunta p {
+      margin: 0;
+      padding: 0 0 14px;
+
+      color: var(--gris);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    /* CTA */
+
+    .cta {
+      color: #ffffff;
+      background: var(--azul);
+    }
+
+    .cta-contenido {
+      min-height: 145px;
+
+      display: grid;
+      grid-template-columns: 210px 1fr auto;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .cta-imagen img {
+      width: 190px;
+      height: 115px;
+      object-fit: contain;
+    }
+
+    .cta h2 {
+      margin: 0 0 7px;
+      font-size: 20px;
+    }
+
+    .cta p {
+      margin: 0;
+
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0 15px;
+      background: #f8fafc;
+    }
+
+    .rejilla-footer {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 0.8fr 1.6fr;
+      gap: 42px;
+    }
+
+    .logo-footer img {
+      width: 110px;
+    }
+
+    .logo-footer p {
+      margin-top: 10px;
+
+      font-size: 8px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .columna-footer h3 {
+      margin: 0 0 10px;
+      font-size: 10px;
+    }
+
+    .columna-footer p,
+    .columna-footer a {
+      display: block;
+      margin: 2px 0;
+
+      color: #5f6977;
+      font-size: 9px;
+      line-height: 1.65;
+    }
+
+    .columna-footer a:hover {
+      color: var(--rojo);
+    }
+
+    .derechos {
+      margin-top: 27px;
+      padding-top: 13px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      border-top: 1px solid #d8dee5;
+
+      color: #6d7683;
+      font-size: 9px;
+    }
+
+    /* WHATSAPP FLOTANTE */
+
+    .whatsapp-flotante {
+      position: fixed;
+      right: 19px;
+      bottom: 19px;
+      z-index: 50;
+
+      width: 54px;
+      height: 54px;
+
+      display: grid;
+      place-items: center;
+
+      color: #ffffff;
+      background: #20bd60;
+      border-radius: 50%;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1050px) {
+      .rejilla-fallas {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .rejilla-servicios {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .rejilla-marcas {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .rejilla-proceso {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px 14px;
+      }
+
+      .flecha {
+        display: none;
+      }
+
+      .galeria {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cta-contenido {
+        grid-template-columns: 160px 1fr;
+        padding: 20px 0;
+      }
+
+      .cta-contenido .boton {
+        grid-column: 1 / -1;
+      }
+
+      .rejilla-footer {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 720px) {
+      .contenedor {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .navegacion {
+        min-height: 76px;
+      }
+
+      .marca img {
+        width: 92px;
+      }
+
+      .marca-texto,
+      .navegacion > .boton {
+        display: none;
+      }
+
+      .hero {
+        background-position: 63% center;
+      }
+
+      .contenido-hero {
+        min-height: 465px;
+      }
+
+      .texto-hero {
+        padding: 50px 0 65px;
+      }
+
+      .texto-hero h1 {
+        font-size: 21px;
+      }
+
+      .texto-hero h1 strong {
+        font-size: 34px;
+      }
+
+      .texto-hero h2 {
+        font-size: 16px;
+      }
+
+      .acciones-hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .rejilla-beneficios {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .beneficio {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 10px;
+      }
+
+      .rejilla-marcas,
+      .rejilla-fallas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rejilla-servicios {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rejilla-elegir,
+      .rejilla-clientes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px 10px;
+      }
+
+      .rejilla-proceso {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .galeria {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rejilla-preguntas {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-contenido {
+        grid-template-columns: 1fr;
+        padding: 28px 0;
+        text-align: center;
+      }
+
+      .cta-imagen {
+        display: none;
+      }
+
+      .rejilla-footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .derechos {
+        flex-direction: column;
+      }
+
+      .titulo-seccion {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .rejilla-servicios,
+      .rejilla-proceso {
+        grid-template-columns: 1fr;
+      }
+
+      .texto-hero h1 strong {
+        font-size: 29px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
   <header class="hero" id="inicio">
 
-    <nav class="nav container">
+    <nav class="navegacion contenedor">
 
-      <a href="#inicio" class="brand" aria-label="RTV inicio">
-
+      <a class="marca" href="#inicio">
         <img
-          src="assets/LOGO RTV.png"
+          src="./LOGO RTV.png"
           alt="RTV Servicios Electrónicos"
         >
 
-        <span>
-          <strong>RTV</strong>
-
-          <small>
-            Servicio técnico especializado<br>
-            en equipos aeronáuticos
-          </small>
-        </span>
-
+        <div class="marca-texto">
+          Servicio técnico especializado<br>
+          en equipos aeronáuticos
+        </div>
       </a>
 
       <a
-        class="btn btn-whatsapp btn-outline"
+        class="boton boton-verde"
         href="https://wa.me/51946204472"
         target="_blank"
         rel="noopener"
       >
-        ◉ Escríbenos por WhatsApp
+        <span class="icono-wa">☎</span>
+        Escríbenos por WhatsApp
       </a>
 
     </nav>
 
-    <div class="hero-content container">
+    <div class="contenido-hero contenedor">
 
-      <div class="hero-copy">
-
-        <p class="eyebrow">
-          Servicio técnico especializado
-        </p>
+      <div class="texto-hero">
 
         <h1>
-          REPARACIÓN ESPECIALIZADA DE
+          Reparación especializada de
 
-          <span>
-            HEADSETS <b>AERONÁUTICOS</b>
-          </span>
+          <strong>
+            Headsets <span>aeronáuticos</span>
+          </strong>
         </h1>
 
         <h2>
@@ -93,24 +1015,26 @@
           más altos estándares técnicos.
         </p>
 
-        <div class="hero-actions">
+        <div class="acciones-hero">
 
           <a
-            class="btn btn-primary"
-            href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20solicitar%20un%20diagnóstico"
+            class="boton boton-rojo"
+            href="https://wa.me/51946204472?text=Hola%20RTV%2C%20quiero%20solicitar%20un%20diagnóstico"
             target="_blank"
             rel="noopener"
           >
-            ◉ Solicitar diagnóstico
+            <span class="icono-wa">☎</span>
+            Solicitar diagnóstico
           </a>
 
           <a
-            class="btn btn-dark"
-            href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20cotizar%20una%20reparación"
+            class="boton boton-oscuro"
+            href="https://wa.me/51946204472?text=Hola%20RTV%2C%20quiero%20cotizar%20la%20reparación%20de%20un%20headset"
             target="_blank"
             rel="noopener"
           >
-            ◉ Cotizar por WhatsApp
+            <span class="icono-wa">☎</span>
+            Cotizar por WhatsApp
           </a>
 
         </div>
@@ -119,13 +1043,13 @@
 
     </div>
 
-    <div class="hero-benefits">
+    <div class="barra-beneficios">
 
-      <div class="container benefit-grid">
+      <div class="rejilla-beneficios contenedor">
 
-        <article>
+        <article class="beneficio">
           <img
-            src="assets/especialistas en equipos aeronáuticos HERO.png"
+            src="./especialistas en equipos aeronáuticos HERO.png"
             alt="Especialistas en equipos aeronáuticos"
           >
 
@@ -135,9 +1059,9 @@
           </span>
         </article>
 
-        <article>
+        <article class="beneficio">
           <img
-            src="assets/Reparaciones con garantía HERO.png"
+            src="./Reparaciones con garantía HERO.png"
             alt="Reparaciones con garantía"
           >
 
@@ -147,9 +1071,10 @@
           </span>
         </article>
 
-        <article>
+        <article class="beneficio">
           <img
-            src="assets/componentes de alta calidad HERO.png"
+            src="./componentes de alta calidasd HERO.png"
+            data-alternativas="./componentes de alta calidad HERO.png"
             alt="Componentes de alta calidad"
           >
 
@@ -159,9 +1084,9 @@
           </span>
         </article>
 
-        <article>
+        <article class="beneficio">
           <img
-            src="assets/cumplimos estándares de seguridad aérea HERO.png"
+            src="./cumplimos estándares de seguridad aérea HERO.png"
             alt="Estándares de seguridad aérea"
           >
 
@@ -179,51 +1104,50 @@
 
   <main>
 
-    <!-- MARCAS -->
-    <section class="section brands">
+    <section class="seccion marcas">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title">
-          TRABAJAMOS CON LAS
-          <span>PRINCIPALES MARCAS</span>
+        <h2 class="titulo-seccion">
+          Trabajamos con las
+          <span>principales marcas</span>
         </h2>
 
-        <div class="brand-grid">
+        <div class="rejilla-marcas">
 
           <img
-            src="assets/LOGO DE BOSE.png"
+            src="./LOGO DE BOSE.png"
             alt="Bose"
           >
 
           <img
-            src="assets/dclark-logo.png"
+            src="./dclark-logo.png"
             alt="David Clark"
           >
 
           <img
-            src="assets/LOGO LIGHTSPEED AVIATION.png"
+            src="./LOGO LIGHTSPEED AVIATION.png"
             alt="Lightspeed Aviation"
           >
 
           <img
-            src="assets/LOGO TELEX.png"
+            src="./LOGO TELEX.png"
             alt="Telex"
           >
 
-          <div class="pilot-logo">
+          <div class="logo-pilot">
             PILOT
             <small>COMMUNICATIONS USA</small>
           </div>
 
           <img
-            src="assets/LOGO DE SENNHEISER AVIATION.png"
+            src="./LOGO DE SENNHEISER AVIATION.png"
             alt="Sennheiser Aviation"
           >
 
         </div>
 
-        <p class="legal-note">
+        <p class="aviso-marcas">
           * No somos distribuidores autorizados. RTV Servicios
           Electrónicos es un servicio técnico independiente.
         </p>
@@ -232,21 +1156,21 @@
 
     </section>
 
-    <!-- FALLAS -->
-    <section class="section failures">
+    <section class="seccion fallas">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title">
-          SOLUCIONAMOS LAS
-          <span>FALLAS MÁS COMUNES</span>
+        <h2 class="titulo-seccion">
+          Solucionamos las
+          <span>fallas más comunes</span>
         </h2>
 
-        <div class="failure-grid">
+        <div class="rejilla-fallas">
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/NO SE ESCUCHA O VOLUMEN BAJO FALLAS MAS COMUNES.png"
+              src="./NO SE ESCUCHA O VOLUMEN BAJO FALLAS MÁS COMUNES.png"
+              data-alternativas="./NO SE ESCUCHA O VOLUMEN BAJO FALLAS MAS COMUNES.png"
               alt="No se escucha o volumen bajo"
             >
 
@@ -256,9 +1180,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/MICRÓFONO NO TRANSMITE FALLAS COMUNES.png"
+              src="./MICRÓFONO NO TRANSMITE FALLAS COMUNES.png"
               alt="Micrófono no transmite"
             >
 
@@ -268,9 +1192,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+              src="./CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
               alt="Cable dañado o cortado"
             >
 
@@ -280,9 +1204,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/CONECTOR U-174 FALLAS COMUNES.png"
+              src="./CONECTOR U-174 FALLAS COMUNES.png"
               alt="Conector U-174 averiado"
             >
 
@@ -292,9 +1216,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/RUIDO O ESTATICA EN LA COMUNICACIÓN FALLAS COMUNES.png"
+              src="./RUIDO O ESTATICA EN LA COMUNICACIÓN FALLAS COMUNES.png"
               alt="Ruido o estática"
             >
 
@@ -304,9 +1228,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/AURICULARES DAÑADOS O SIN SONIDO FALLAS COMUNES.png"
+              src="./AURICULARES DAÑADOS O SIN SONIDO FALLAS COMUNES.png"
               alt="Auriculares dañados"
             >
 
@@ -316,9 +1240,9 @@
             </p>
           </article>
 
-          <article>
+          <article class="tarjeta-falla">
             <img
-              src="assets/DIADEMA ROTA O SUELTE FALLAS COMUNES.png"
+              src="./DIADEMA ROTA O SUELTE FALLAS COMUNES.png"
               alt="Diadema rota o suelta"
             >
 
@@ -328,15 +1252,13 @@
             </p>
           </article>
 
-          <article class="fallback-icon">
-
-            <span>⇵</span>
+          <article class="tarjeta-falla">
+            <div class="icono-ptt">⇵</div>
 
             <p>
               Fallas en PTT o<br>
               conexiones
             </p>
-
           </article>
 
         </div>
@@ -345,129 +1267,107 @@
 
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="section services" id="servicios">
+    <section class="seccion servicios" id="servicios">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title">
-          NUESTROS <span>SERVICIOS</span>
+        <h2 class="titulo-seccion">
+          Nuestros <span>servicios</span>
         </h2>
 
-        <div class="service-grid">
+        <div class="rejilla-servicios">
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
+              src="./DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
               alt="Diagnóstico técnico especializado"
             >
 
-            <div>
-              <h3>
-                Diagnóstico técnico especializado
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Diagnóstico técnico especializado</h3>
 
               <p>
-                Revisión completa del equipo con instrumentos de precisión.
+                Revisión completa del equipo con instrumentos
+                de precisión.
               </p>
             </div>
-
           </article>
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+              src="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIOS.png"
+              data-alternativas="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
               alt="Reparación electrónica"
             >
 
-            <div>
-              <h3>
-                Reparación electrónica
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Reparación electrónica</h3>
 
               <p>
                 Reparamos a nivel de componente.
               </p>
             </div>
-
           </article>
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+              src="./CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
               alt="Cambio de cable y conectores"
             >
 
-            <div>
-              <h3>
-                Cambio de cable y conectores
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Cambio de cable y conectores</h3>
 
               <p>
                 Usamos repuestos de alta calidad y compatibilidad.
               </p>
             </div>
-
           </article>
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
+              src="./CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
               alt="Cambio de almohadillas y espumas"
             >
 
-            <div>
-              <h3>
-                Cambio de almohadillas y espumas
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Cambio de almohadillas y espumas</h3>
 
               <p>
                 Mejoramos el confort y el sellado acústico.
               </p>
             </div>
-
           </article>
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/CAMBIO DE MICRÓFONO Y CAPSULA NUESTROS SERVICIOS.png"
+              src="./CAMBIO DE MICRÓFONO Y CAPSULA NUESTROS SERVICIOS.png"
               alt="Cambio de micrófono y cápsulas"
             >
 
-            <div>
-              <h3>
-                Cambio de micrófono y cápsulas
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Cambio de micrófono y cápsulas</h3>
 
               <p>
                 Micrófonos originales o de alta fidelidad.
               </p>
             </div>
-
           </article>
 
-          <article>
-
+          <article class="servicio">
             <img
-              src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+              src="./MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
               alt="Mantenimiento preventivo"
             >
 
-            <div>
-              <h3>
-                Mantenimiento preventivo
-              </h3>
+            <div class="servicio-contenido">
+              <h3>Mantenimiento preventivo</h3>
 
               <p>
-                Prolonga la vida útil del equipo y asegura su rendimiento.
+                Prolonga la vida útil del equipo y asegura
+                su rendimiento.
               </p>
             </div>
-
           </article>
 
         </div>
@@ -476,60 +1376,44 @@
 
     </section>
 
-    <!-- POR QUÉ ELEGIR RTV -->
-    <section class="why">
+    <section class="elegir">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title light">
-          ¿POR QUÉ ELEGIR <span>RTV</span>?
+        <h2 class="titulo-seccion titulo-blanco">
+          ¿Por qué elegir <span>RTV</span>?
         </h2>
 
-        <div class="why-grid">
+        <div class="rejilla-elegir">
 
-          <article>
-            <div class="line-icon">▣</div>
-
-            <p>
-              Especialización en<br>
-              equipos aeronáuticos
-            </p>
+          <article class="opcion-elegir">
+            <div class="icono-elegir">▣</div>
+            Especialización en<br>
+            equipos aeronáuticos
           </article>
 
-          <article>
-            <div class="line-icon">▤</div>
-
-            <p>
-              Técnicos capacitados<br>
-              en estándares de aviación
-            </p>
+          <article class="opcion-elegir">
+            <div class="icono-elegir">▤</div>
+            Técnicos capacitados<br>
+            en estándares de aviación
           </article>
 
-          <article>
-            <div class="line-icon">✹</div>
-
-            <p>
-              Repuestos de alta<br>
-              calidad y compatibilidad
-            </p>
+          <article class="opcion-elegir">
+            <div class="icono-elegir">✹</div>
+            Repuestos de alta<br>
+            calidad y compatibilidad
           </article>
 
-          <article>
-            <div class="line-icon">◎</div>
-
-            <p>
-              Garantía en todas<br>
-              nuestras reparaciones
-            </p>
+          <article class="opcion-elegir">
+            <div class="icono-elegir">◎</div>
+            Garantía en todas<br>
+            nuestras reparaciones
           </article>
 
-          <article>
-            <div class="line-icon">◉</div>
-
-            <p>
-              Atención rápida y<br>
-              asesoría profesional
-            </p>
+          <article class="opcion-elegir">
+            <div class="icono-elegir">◉</div>
+            Atención rápida y<br>
+            asesoría profesional
           </article>
 
         </div>
@@ -538,128 +1422,105 @@
 
     </section>
 
-    <!-- PROCESO -->
-    <section class="section process">
+    <section class="seccion proceso">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title">
-          NUESTRO <span>PROCESO</span> DE ATENCIÓN
+        <h2 class="titulo-seccion">
+          Nuestro <span>proceso</span> de atención
         </h2>
 
-        <div class="process-grid">
+        <div class="rejilla-proceso">
 
-          <article>
-            <b>1</b>
-            <span>◉</span>
-
+          <article class="paso">
+            <div class="numero-paso">1</div>
+            <span class="icono-paso">☎</span>
             <h3>Contáctanos</h3>
-
-            <p>
-              Cuéntanos la falla o envíanos fotos.
-            </p>
+            <p>Cuéntanos la falla o envíanos fotos.</p>
           </article>
 
-          <i>→</i>
+          <i class="flecha">→</i>
 
-          <article>
-            <b>2</b>
-            <span>▤</span>
-
+          <article class="paso">
+            <div class="numero-paso">2</div>
+            <span class="icono-paso">▤</span>
             <h3>Diagnóstico</h3>
-
-            <p>
-              Evaluamos tu headset y detectamos el problema.
-            </p>
+            <p>Evaluamos tu headset y detectamos el problema.</p>
           </article>
 
-          <i>→</i>
+          <i class="flecha">→</i>
 
-          <article>
-            <b>3</b>
-            <span>▧</span>
-
+          <article class="paso">
+            <div class="numero-paso">3</div>
+            <span class="icono-paso">▧</span>
             <h3>Cotización</h3>
-
-            <p>
-              Te enviamos el presupuesto sin compromiso.
-            </p>
+            <p>Te enviamos el presupuesto sin compromiso.</p>
           </article>
 
-          <i>→</i>
+          <i class="flecha">→</i>
 
-          <article>
-            <b>4</b>
-            <span>🛠</span>
-
+          <article class="paso">
+            <div class="numero-paso">4</div>
+            <span class="icono-paso">⚒</span>
             <h3>Reparación</h3>
-
-            <p>
-              Realizamos la reparación con repuestos de calidad.
-            </p>
+            <p>Realizamos la reparación con repuestos de calidad.</p>
           </article>
 
-          <i>→</i>
+          <i class="flecha">→</i>
 
-          <article>
-            <b>5</b>
-            <span>✓</span>
-
+          <article class="paso">
+            <div class="numero-paso">5</div>
+            <span class="icono-paso">✓</span>
             <h3>Pruebas</h3>
-
-            <p>
-              Verificamos el correcto funcionamiento.
-            </p>
+            <p>Verificamos el correcto funcionamiento.</p>
           </article>
 
-          <i>→</i>
+          <i class="flecha">→</i>
 
-          <article>
-            <b>6</b>
-            <span>◇</span>
-
+          <article class="paso">
+            <div class="numero-paso">6</div>
+            <span class="icono-paso">◇</span>
             <h3>Entrega</h3>
-
-            <p>
-              Te entregamos tu equipo listo para volar.
-            </p>
+            <p>Te entregamos tu equipo listo para volar.</p>
           </article>
 
         </div>
 
-        <h2 class="section-title examples-title">
-          EJEMPLOS DE <span>REPARACIONES</span>
+        <h2 class="titulo-seccion titulo-ejemplos">
+          Ejemplos de <span>reparaciones</span>
         </h2>
 
-        <div class="gallery">
+        <div class="galeria">
 
           <img
-            src="assets/DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
-            alt="Ejemplo de diagnóstico"
+            src="./DIAGNÓSTICO TÉCNICO ESPECIALIZADO NUESTROS SERVICIOS.png"
+            alt="Diagnóstico de headset"
           >
 
           <img
-            src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
-            alt="Ejemplo de reparación"
+            src="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIOS.png"
+            data-alternativas="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+            alt="Reparación de headset"
           >
 
           <img
-            src="assets/REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
-            alt="Ejemplo de reparación electrónica"
+            src="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIOS.png"
+            data-alternativas="./REPARACIÓN ELECTRÓNICA NUESTRO SERVICIO.png"
+            alt="Reparación electrónica"
           >
 
           <img
-            src="assets/CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
-            alt="Ejemplo de reparación de cable"
+            src="./CABLE DAÑADO O CORTADO FALLAS COMUNES.png"
+            alt="Reparación de cable"
           >
 
           <img
-            src="assets/CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
+            src="./CAMBIO DE ALMOHADILLAS Y ESPUMAS NUESTROS SERVICIOS.png"
             alt="Cambio de almohadillas"
           >
 
           <img
-            src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+            src="./MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
             alt="Mantenimiento preventivo"
           >
 
@@ -669,19 +1530,18 @@
 
     </section>
 
-    <!-- CLIENTES -->
-    <section class="audience">
+    <section class="clientes">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title light">
-          ¿A QUIÉNES <span>ATENDEMOS</span>?
+        <h2 class="titulo-seccion titulo-blanco">
+          ¿A quiénes <span>atendemos</span>?
         </h2>
 
-        <div class="audience-grid">
+        <div class="rejilla-clientes">
 
-          <article>
-            <div>♙</div>
+          <article class="cliente">
+            <div class="cliente-icono">♙</div>
 
             <p>
               Pilotos<br>
@@ -689,8 +1549,8 @@
             </p>
           </article>
 
-          <article>
-            <div>◇</div>
+          <article class="cliente">
+            <div class="cliente-icono">◇</div>
 
             <p>
               Escuelas de<br>
@@ -698,8 +1558,8 @@
             </p>
           </article>
 
-          <article>
-            <div>✈</div>
+          <article class="cliente">
+            <div class="cliente-icono">✈</div>
 
             <p>
               Aerolíneas y<br>
@@ -707,8 +1567,8 @@
             </p>
           </article>
 
-          <article>
-            <div>🛠</div>
+          <article class="cliente">
+            <div class="cliente-icono">⚒</div>
 
             <p>
               Talleres y centros<br>
@@ -716,8 +1576,8 @@
             </p>
           </article>
 
-          <article>
-            <div>⬡</div>
+          <article class="cliente">
+            <div class="cliente-icono">⬡</div>
 
             <p>
               Fuerzas armadas<br>
@@ -731,83 +1591,80 @@
 
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
-    <section class="section faq" id="preguntas">
+    <section class="seccion preguntas" id="preguntas">
 
-      <div class="container">
+      <div class="contenedor">
 
-        <h2 class="section-title">
-          PREGUNTAS <span>FRECUENTES</span>
+        <h2 class="titulo-seccion">
+          Preguntas <span>frecuentes</span>
         </h2>
 
-        <div class="faq-grid">
+        <div class="rejilla-preguntas">
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Cuánto tiempo demora la reparación?
             </summary>
 
             <p>
               El tiempo depende de la falla y de la disponibilidad
-              de repuestos. Después del diagnóstico te indicamos el
-              plazo estimado.
+              de repuestos. Después del diagnóstico te indicaremos
+              el plazo estimado.
             </p>
           </details>
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Pueden recoger y entregar el equipo?
             </summary>
 
             <p>
-              Coordinamos el recojo y la entrega según la ubicación.
-              Escríbenos para confirmar cobertura y costo.
+              Podemos coordinar el recojo y la entrega según
+              la ubicación y disponibilidad.
             </p>
           </details>
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Tienen garantía las reparaciones?
             </summary>
 
             <p>
-              Sí. La garantía aplica sobre el trabajo realizado y
-              los repuestos instalados según las condiciones de la
-              cotización.
+              Sí. La garantía se aplica al trabajo realizado y a
+              los repuestos instalados según la cotización.
             </p>
           </details>
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Qué tipo de conector utilizan los headsets aeronáuticos?
             </summary>
 
             <p>
-              Trabajamos con conectores aeronáuticos comunes,
-              incluyendo doble plug y U-174, entre otros.
+              Trabajamos con conectores aeronáuticos como U-174,
+              doble plug y otros modelos compatibles.
             </p>
           </details>
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Reparan todas las marcas de headsets aeronáuticos?
             </summary>
 
             <p>
-              Atendemos las principales marcas del mercado. La
-              evaluación previa confirma la viabilidad de reparación.
+              Atendemos las principales marcas. La evaluación
+              inicial permitirá confirmar la viabilidad del servicio.
             </p>
           </details>
 
-          <details>
+          <details class="pregunta">
             <summary>
               ¿Realizan mantenimiento preventivo?
             </summary>
 
             <p>
-              Sí. Incluye inspección, limpieza técnica, revisión de
-              cableado, conectores, almohadillas, micrófono y pruebas
-              funcionales.
+              Sí. Incluye inspección, limpieza técnica, revisión
+              de cableado, conectores, micrófono y pruebas.
             </p>
           </details>
 
@@ -817,22 +1674,19 @@
 
     </section>
 
-    <!-- CTA -->
     <section class="cta">
 
-      <div class="container cta-inner">
+      <div class="cta-contenido contenedor">
 
-        <div class="cta-image">
+        <div class="cta-imagen">
           <img
-            src="assets/MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
+            src="./MANTENIMIENTO PREVENTIVO NUESTROS SERVICIOS.png"
             alt="Headset aeronáutico"
           >
         </div>
 
         <div>
-          <h2>
-            TU COMUNICACIÓN, NUESTRA PRIORIDAD
-          </h2>
+          <h2>TU COMUNICACIÓN, NUESTRA PRIORIDAD</h2>
 
           <p>
             Mantén tu headset en óptimas condiciones<br>
@@ -841,12 +1695,13 @@
         </div>
 
         <a
-          class="btn btn-primary"
-          href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20solicitar%20un%20diagnóstico"
+          class="boton boton-rojo"
+          href="https://wa.me/51946204472?text=Hola%20RTV%2C%20quiero%20solicitar%20un%20diagnóstico"
           target="_blank"
           rel="noopener"
         >
-          ◉ Solicitar diagnóstico por WhatsApp
+          <span class="icono-wa">☎</span>
+          Solicitar diagnóstico por WhatsApp
         </a>
 
       </div>
@@ -855,15 +1710,14 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
 
-    <div class="container footer-grid">
+    <div class="rejilla-footer contenedor">
 
-      <div class="footer-brand">
+      <div class="logo-footer">
 
         <img
-          src="assets/LOGO RTV.png"
+          src="./LOGO RTV.png"
           alt="RTV Servicios Electrónicos"
         >
 
@@ -874,25 +1728,21 @@
 
       </div>
 
-      <div>
+      <div class="columna-footer">
 
         <h3>Contacto</h3>
 
-        <p>◉ WhatsApp: 946 204 472</p>
+        <p>☎ WhatsApp: 946 204 472</p>
 
-        <p>
-          ◷ Lunes a Viernes: 9:00 am - 6:00 pm
-        </p>
+        <p>◷ Lunes a viernes: 9:00 am - 6:00 pm</p>
 
-        <p>
-          ✉ info@rtvservicioselectronicos.com
-        </p>
+        <p>✉ info@rtvservicioselectronicos.com</p>
 
         <p>⌖ Lima, Perú</p>
 
       </div>
 
-      <div>
+      <div class="columna-footer">
 
         <h3>Enlaces rápidos</h3>
 
@@ -912,7 +1762,7 @@
 
       </div>
 
-      <div>
+      <div class="columna-footer">
 
         <h3>Aviso legal</h3>
 
@@ -927,10 +1777,11 @@
 
     </div>
 
-    <div class="container copyright">
+    <div class="derechos contenedor">
 
       <span>
-        © 2026 RTV Servicios Electrónicos. Todos los derechos reservados.
+        © 2026 RTV Servicios Electrónicos.
+        Todos los derechos reservados.
       </span>
 
       <span>
@@ -941,18 +1792,49 @@
 
   </footer>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
   <a
-    class="floating-wa"
-    href="https://wa.me/51946204472?text=Hola%20RTV,%20quiero%20información%20sobre%20la%20reparación%20de%20mi%20headset"
+    class="whatsapp-flotante"
+    href="https://wa.me/51946204472?text=Hola%20RTV%2C%20quiero%20información%20sobre%20la%20reparación%20de%20mi%20headset"
     target="_blank"
     rel="noopener"
     aria-label="Contactar por WhatsApp"
   >
-    ◉
+    ☎
   </a>
 
-  <script src="script.js"></script>
+  <script>
+    const preguntas = document.querySelectorAll(".pregunta");
+
+    preguntas.forEach((pregunta) => {
+      pregunta.addEventListener("toggle", () => {
+        if (!pregunta.open) {
+          return;
+        }
+
+        preguntas.forEach((otraPregunta) => {
+          if (otraPregunta !== pregunta) {
+            otraPregunta.open = false;
+          }
+        });
+      });
+    });
+
+    document.querySelectorAll("img[data-alternativas]").forEach((imagen) => {
+      const alternativas = imagen.dataset.alternativas
+        .split("|")
+        .map((ruta) => ruta.trim())
+        .filter(Boolean);
+
+      let posicion = 0;
+
+      imagen.addEventListener("error", () => {
+        if (posicion < alternativas.length) {
+          imagen.src = alternativas[posicion];
+          posicion += 1;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
