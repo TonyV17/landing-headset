@@ -276,53 +276,272 @@
       font-size: 9px;
     }
 
-    /* FALLAS */
+    /* FALLAS - REEL */
 
-    .fallas {
-      background: #fafbfd;
-    }
+.fallas {
+  overflow: hidden;
+  background: #f7f9fc;
+}
 
-    .rejilla-fallas {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 13px;
-    }
+.fallas .titulo-seccion {
+  margin-bottom: 32px;
+  font-size: clamp(24px, 2.2vw, 34px);
+}
 
-    .tarjeta-falla {
-      min-height: 132px;
-      padding: 13px 8px;
-      border: 1px solid var(--borde);
-      border-radius: 7px;
-      background: #ffffff;
-      box-shadow: 0 4px 13px rgba(7, 30, 54, 0.07);
-      text-align: center;
-    }
+.carrusel-fallas {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-    .tarjeta-falla img {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 7px;
-      object-fit: contain;
-    }
+.ventana-fallas {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 4px 24px;
+  touch-action: pan-y;
+}
 
-    .tarjeta-falla p {
-      margin: 0;
-      font-size: 10px;
-      line-height: 1.35;
-      font-weight: 700;
-    }
+.pista-fallas {
+  display: flex;
+  gap: 18px;
+  transition: transform 0.55s ease;
+  will-change: transform;
+}
 
-    .icono-ptt {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 7px;
-      display: grid;
-      place-items: center;
-      color: var(--azul);
-      font-size: 38px;
-      font-weight: 900;
-    }
+.pista-fallas .tarjeta-falla {
+  flex: 0 0 calc((100% - 54px) / 4);
+  min-width: 0;
+}
 
+.tarjeta-falla {
+  min-height: 225px;
+  padding: 24px 15px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dce3eb;
+  border-radius: 12px;
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(7, 30, 54, 0.09),
+    0 2px 7px rgba(7, 30, 54, 0.05);
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tarjeta-falla:hover {
+  transform: translateY(-7px);
+  border-color: rgba(229, 37, 43, 0.4);
+
+  box-shadow:
+    0 16px 32px rgba(7, 30, 54, 0.14),
+    0 0 18px rgba(229, 37, 43, 0.08);
+}
+
+.tarjeta-falla img {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 18px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-falla:hover img {
+  transform: scale(1.08);
+}
+
+.tarjeta-falla p {
+  min-height: 42px;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--azul);
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.icono-ptt {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 18px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--azul);
+  font-size: 68px;
+  font-weight: 900;
+
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-falla:hover .icono-ptt {
+  transform: scale(1.08);
+}
+
+.control-fallas {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  color: #ffffff;
+  background: var(--azul);
+
+  box-shadow: 0 7px 20px rgba(6, 27, 49, 0.25);
+
+  cursor: pointer;
+  font-size: 34px;
+  line-height: 1;
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.control-fallas:hover {
+  background: var(--rojo);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.control-fallas.anterior {
+  left: -23px;
+}
+
+.control-fallas.siguiente {
+  right: -23px;
+}
+
+.indicadores-fallas {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.indicador-falla {
+  width: 9px;
+  height: 9px;
+
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  background: #c5ccd5;
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background 0.25s ease,
+    border-radius 0.25s ease;
+}
+
+.indicador-falla.activo {
+  width: 28px;
+  border-radius: 12px;
+  background: var(--rojo);
+}
+
+@media (max-width: 1050px) {
+  .pista-fallas .tarjeta-falla {
+    flex-basis: calc((100% - 36px) / 3);
+  }
+
+  .control-fallas.anterior {
+    left: -12px;
+  }
+
+  .control-fallas.siguiente {
+    right: -12px;
+  }
+}
+
+@media (max-width: 720px) {
+  .pista-fallas .tarjeta-falla {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+
+  .tarjeta-falla {
+    min-height: 210px;
+    padding: 22px 12px 18px;
+  }
+
+  .tarjeta-falla img,
+  .icono-ptt {
+    width: 92px;
+    height: 92px;
+  }
+
+  .icono-ptt {
+    font-size: 58px;
+  }
+
+  .tarjeta-falla p {
+    font-size: 14px;
+  }
+
+  .control-fallas {
+    width: 42px;
+    height: 42px;
+  }
+
+  .control-fallas.anterior {
+    left: 4px;
+  }
+
+  .control-fallas.siguiente {
+    right: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pista-fallas .tarjeta-falla {
+    flex-basis: 100%;
+  }
+
+  .tarjeta-falla {
+    min-height: 250px;
+  }
+
+  .tarjeta-falla img,
+  .icono-ptt {
+    width: 120px;
+    height: 120px;
+  }
+
+  .icono-ptt {
+    font-size: 72px;
+  }
+
+  .tarjeta-falla p {
+    font-size: 16px;
+  }
+}
     /* SERVICIOS */
 
     .servicios {
@@ -969,10 +1188,7 @@
     /* TABLET */
 
     @media (max-width: 1050px) {
-      .rejilla-fallas {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
+  
       .rejilla-servicios {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -1068,14 +1284,9 @@
         align-items: flex-start;
       }
 
-      .rejilla-marcas,
-      .rejilla-fallas {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .rejilla-servicios {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .rejilla-marcas {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .rejilla-elegir {
   grid-template-columns: repeat(2, 1fr);
@@ -1301,24 +1512,35 @@
       </div>
 
     </section>
+<!-- FALLAS -->
+<section class="seccion fallas">
 
-    <!-- FALLAS -->
-    <section class="seccion fallas">
+  <div class="contenedor">
 
-      <div class="contenedor">
+    <h2 class="titulo-seccion">
+      Solucionamos las
+      <span>fallas más comunes</span>
+    </h2>
 
-        <h2 class="titulo-seccion">
-          Solucionamos las
-          <span>fallas más comunes</span>
-        </h2>
+    <div class="carrusel-fallas">
 
-        <div class="rejilla-fallas">
+      <button
+        class="control-fallas anterior"
+        type="button"
+        aria-label="Falla anterior"
+      >
+        ‹
+      </button>
+
+      <div class="ventana-fallas">
+
+        <div class="pista-fallas">
 
           <article class="tarjeta-falla">
             <img
               src="./NO SE ESCUCHA O VOLUMEN BAJO fALLAS MÁS COMUNES.png"
               data-alternativas="./NO SE ESCUCHA O VOLUMEN BAJO fALLAS MÁS COMUNES.png"
-              alt="NO SE ESCUCHA O VOLUMEN BAJO fALLAS MÁS COMUNES.png"
+              alt="No se escucha o volumen bajo"
             >
 
             <p>
@@ -1366,7 +1588,7 @@
           <article class="tarjeta-falla">
             <img
               src="./RUIDO O ESTATICA EN LA COMUNICACIÓN FALLAS COMUNES.png"
-              alt="Ruido o estática"
+              alt="Ruido o estática en la comunicación"
             >
 
             <p>
@@ -1378,7 +1600,7 @@
           <article class="tarjeta-falla">
             <img
               src="./AURICULARES DAÑADOS O SIN SONIDO FALLAS COMUNES.png"
-              alt="Auriculares dañados"
+              alt="Auriculares dañados o sin sonido"
             >
 
             <p>
@@ -1416,7 +1638,24 @@
 
       </div>
 
-    </section>
+      <button
+        class="control-fallas siguiente"
+        type="button"
+        aria-label="Falla siguiente"
+      >
+        ›
+      </button>
+
+    </div>
+
+    <div
+      class="indicadores-fallas"
+      aria-label="Posición del reel de fallas"
+    ></div>
+
+  </div>
+
+</section>  
 
 <section class="seccion servicios" id="servicios">
 
@@ -2337,6 +2576,217 @@ window.addEventListener("resize", () => {
 crearIndicadoresServicios();
 actualizarCarruselServicios();
 iniciarCarruselAutomatico();
+/* REEL DE FALLAS */
+
+const pistaFallas = document.querySelector(".pista-fallas");
+const ventanaFallas = document.querySelector(".ventana-fallas");
+const tarjetasFallas = document.querySelectorAll(
+  ".pista-fallas .tarjeta-falla"
+);
+
+const botonFallaAnterior = document.querySelector(
+  ".control-fallas.anterior"
+);
+
+const botonFallaSiguiente = document.querySelector(
+  ".control-fallas.siguiente"
+);
+
+const contenedorIndicadoresFallas = document.querySelector(
+  ".indicadores-fallas"
+);
+
+let indiceFalla = 0;
+let intervaloFallas;
+let inicioDeslizamientoFallas = 0;
+let desplazamientoFallas = 0;
+
+function fallasVisibles() {
+  if (window.innerWidth <= 480) {
+    return 1;
+  }
+
+  if (window.innerWidth <= 720) {
+    return 2;
+  }
+
+  if (window.innerWidth <= 1050) {
+    return 3;
+  }
+
+  return 4;
+}
+
+function totalPosicionesFallas() {
+  return Math.max(
+    1,
+    tarjetasFallas.length - fallasVisibles() + 1
+  );
+}
+
+function anchoPasoFalla() {
+  const primeraTarjeta = tarjetasFallas[0];
+
+  if (!primeraTarjeta) {
+    return 0;
+  }
+
+  const estilosPista = window.getComputedStyle(pistaFallas);
+  const espacio = parseFloat(estilosPista.columnGap) || 0;
+
+  return primeraTarjeta.getBoundingClientRect().width + espacio;
+}
+
+function crearIndicadoresFallas() {
+  contenedorIndicadoresFallas.innerHTML = "";
+
+  for (
+    let posicion = 0;
+    posicion < totalPosicionesFallas();
+    posicion += 1
+  ) {
+    const indicador = document.createElement("button");
+
+    indicador.type = "button";
+    indicador.className = "indicador-falla";
+
+    indicador.setAttribute(
+      "aria-label",
+      `Ir a la falla ${posicion + 1}`
+    );
+
+    indicador.addEventListener("click", () => {
+      indiceFalla = posicion;
+      actualizarReelFallas();
+      reiniciarReelFallas();
+    });
+
+    contenedorIndicadoresFallas.appendChild(indicador);
+  }
+}
+
+function actualizarIndicadoresFallas() {
+  const indicadores = contenedorIndicadoresFallas.querySelectorAll(
+    ".indicador-falla"
+  );
+
+  indicadores.forEach((indicador, posicion) => {
+    indicador.classList.toggle(
+      "activo",
+      posicion === indiceFalla
+    );
+  });
+}
+
+function actualizarReelFallas() {
+  const posiciones = totalPosicionesFallas();
+
+  if (indiceFalla >= posiciones) {
+    indiceFalla = 0;
+  }
+
+  if (indiceFalla < 0) {
+    indiceFalla = posiciones - 1;
+  }
+
+  pistaFallas.style.transform =
+    `translateX(-${indiceFalla * anchoPasoFalla()}px)`;
+
+  actualizarIndicadoresFallas();
+}
+
+function avanzarFallas() {
+  indiceFalla += 1;
+  actualizarReelFallas();
+}
+
+function retrocederFallas() {
+  indiceFalla -= 1;
+  actualizarReelFallas();
+}
+
+function iniciarReelFallas() {
+  detenerReelFallas();
+
+  intervaloFallas = window.setInterval(() => {
+    avanzarFallas();
+  }, 3200);
+}
+
+function detenerReelFallas() {
+  window.clearInterval(intervaloFallas);
+}
+
+function reiniciarReelFallas() {
+  detenerReelFallas();
+  iniciarReelFallas();
+}
+
+botonFallaSiguiente.addEventListener("click", () => {
+  avanzarFallas();
+  reiniciarReelFallas();
+});
+
+botonFallaAnterior.addEventListener("click", () => {
+  retrocederFallas();
+  reiniciarReelFallas();
+});
+
+ventanaFallas.addEventListener("mouseenter", () => {
+  detenerReelFallas();
+});
+
+ventanaFallas.addEventListener("mouseleave", () => {
+  iniciarReelFallas();
+});
+
+ventanaFallas.addEventListener(
+  "touchstart",
+  (evento) => {
+    inicioDeslizamientoFallas =
+      evento.touches[0].clientX;
+
+    desplazamientoFallas =
+      inicioDeslizamientoFallas;
+
+    detenerReelFallas();
+  },
+  { passive: true }
+);
+
+ventanaFallas.addEventListener(
+  "touchmove",
+  (evento) => {
+    desplazamientoFallas =
+      evento.touches[0].clientX;
+  },
+  { passive: true }
+);
+
+ventanaFallas.addEventListener("touchend", () => {
+  const distancia =
+    inicioDeslizamientoFallas - desplazamientoFallas;
+
+  if (Math.abs(distancia) > 45) {
+    if (distancia > 0) {
+      avanzarFallas();
+    } else {
+      retrocederFallas();
+    }
+  }
+
+  iniciarReelFallas();
+});
+
+window.addEventListener("resize", () => {
+  indiceFalla = 0;
+  crearIndicadoresFallas();
+  actualizarReelFallas();
+});
+
+crearIndicadoresFallas();
+actualizarReelFallas();
+iniciarReelFallas();
   </script>
 
 </body>
