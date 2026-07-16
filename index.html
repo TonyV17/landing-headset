@@ -1189,37 +1189,161 @@
 
     /* POR QUÉ ELEGIR */
 
-    .elegir {
-      padding: 35px 0;
-      color: #ffffff;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(4, 24, 43, 0.95),
-          rgba(5, 38, 66, 0.91)
-        ),
-        url("./imagen de fondo con avión.png")
-        left center / cover no-repeat;
-    }
+    /* =========================================
+   SECCIÓN: ¿POR QUÉ ELEGIR RTV?
+========================================= */
 
-    .rejilla-elegir {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 26px;
-      text-align: center;
-    }
+.elegir {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  isolation: isolate;
 
-    .opcion-elegir {
-      font-size: 10px;
-      line-height: 1.4;
-      font-weight: 700;
-    }
+  padding: 42px 0 48px;
 
-    .icono-elegir {
-  width: 96px;
-  height: 96px;
+  color: #ffffff;
+  background: #061c33;
+}
 
-  margin: 0 auto 18px;
+/* Avión del lado izquierdo */
+.elegir::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  background-image:
+    url("./AVIÓNCSNA1ELEGIR.png");
+
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 125%;
+
+  opacity: 0.82;
+
+  filter:
+    brightness(0.72)
+    contrast(1.08)
+    saturate(0.82);
+}
+
+/* Avión del lado derecho */
+.elegir::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-image:
+    url("./AVIÓNCSNA2ELEGIR.png");
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 125%;
+
+  opacity: 0.82;
+
+  filter:
+    brightness(0.72)
+    contrast(1.08)
+    saturate(0.82);
+}
+
+/* Capa para oscurecer el centro sin ocultar los aviones */
+.elegir .contenedor {
+  position: relative;
+  z-index: 2;
+}
+
+.elegir .contenedor::before {
+  content: "";
+
+  position: absolute;
+  top: -42px;
+  right: -10vw;
+  bottom: -48px;
+  left: -10vw;
+
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 25, 45, 0.28) 0%,
+      rgba(5, 25, 45, 0.62) 17%,
+      rgba(5, 25, 45, 0.94) 36%,
+      rgba(5, 25, 45, 0.98) 50%,
+      rgba(5, 25, 45, 0.94) 64%,
+      rgba(5, 25, 45, 0.62) 83%,
+      rgba(5, 25, 45, 0.28) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(1, 13, 27, 0.20),
+      rgba(1, 13, 27, 0.36)
+    );
+}
+
+/* Título */
+
+.elegir .titulo-seccion {
+  margin: 0 0 35px;
+
+  color: #ffffff;
+
+  font-size: clamp(24px, 2.1vw, 34px);
+  line-height: 1.1;
+  font-weight: 900;
+
+  letter-spacing: -0.4px;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.55);
+}
+
+.elegir .titulo-seccion span {
+  color: var(--rojo);
+}
+
+/* Rejilla de beneficios */
+
+.rejilla-elegir {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(145px, 1fr));
+  align-items: start;
+
+  gap: clamp(22px, 3vw, 55px);
+
+  text-align: center;
+}
+
+/* Cada beneficio */
+
+.opcion-elegir {
+  min-width: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(11px, 0.9vw, 14px);
+  line-height: 1.35;
+  font-weight: 700;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.65);
+}
+
+/* Círculo exterior */
+
+.icono-elegir {
+  position: relative;
+
+  width: 104px;
+  height: 104px;
+
+  margin: 0 auto 17px;
 
   display: flex;
   align-items: center;
@@ -1228,37 +1352,181 @@
   border: 2px solid var(--rojo);
   border-radius: 50%;
 
-  background: rgba(255,255,255,.02);
+  background:
+    radial-gradient(
+      circle,
+      rgba(16, 61, 96, 0.36) 0%,
+      rgba(4, 28, 51, 0.62) 65%,
+      rgba(3, 20, 38, 0.82) 100%
+    );
+
+  box-shadow:
+    inset 0 0 20px rgba(24, 112, 177, 0.10),
+    0 0 14px rgba(0, 0, 0, 0.30);
 
   transition:
-      transform .30s ease,
-      box-shadow .30s ease,
-      border-color .30s ease;
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.icono-elegir img{
-    width:72px;
-    height:72px;
-    object-fit:contain;
+/* Segundo círculo interior */
 
-    filter:
-        drop-shadow(0 0 4px rgba(82,180,255,.30))
-        drop-shadow(0 0 7px rgba(255,48,68,.20));
+.icono-elegir::before {
+  content: "";
 
-    transition:transform .30s ease;
+  position: absolute;
+  inset: 17px;
+
+  border: 1px solid rgba(229, 37, 43, 0.68);
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
-.opcion-elegir:hover .icono-elegir{
-    transform:translateY(-4px);
-    border-color:#ff4a5b;
+/* Imagen de cada beneficio */
 
-    box-shadow:
-        0 0 18px rgba(255,52,72,.20),
-        inset 0 0 16px rgba(255,52,72,.10);
+.icono-elegir img {
+  position: relative;
+  z-index: 2;
+
+  width: 66px;
+  height: 66px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 4px rgba(71, 176, 255, 0.28))
+    drop-shadow(0 0 6px rgba(229, 37, 43, 0.16));
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
-.opcion-elegir:hover .icono-elegir img{
-    transform:scale(1.08);
+/* Línea roja debajo del texto */
+
+.opcion-elegir::after {
+  content: "";
+
+  display: block;
+
+  width: 48px;
+  height: 2px;
+
+  margin: 15px auto 0;
+
+  background: var(--rojo);
+
+  box-shadow:
+    0 0 6px rgba(229, 37, 43, 0.35);
+}
+
+/* Efectos hover */
+
+.opcion-elegir:hover .icono-elegir {
+  transform: translateY(-6px);
+
+  border-color: #ff3440;
+
+  box-shadow:
+    inset 0 0 24px rgba(24, 112, 177, 0.16),
+    0 0 22px rgba(229, 37, 43, 0.18);
+}
+
+.opcion-elegir:hover .icono-elegir img {
+  transform: scale(1.08);
+
+  filter:
+    drop-shadow(0 0 6px rgba(71, 176, 255, 0.38))
+    drop-shadow(0 0 8px rgba(229, 37, 43, 0.25));
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .elegir {
+    min-height: auto;
+  }
+
+  .elegir::before,
+  .elegir::after {
+    background-size: auto 105%;
+    opacity: 0.62;
+  }
+
+  .rejilla-elegir {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 24px;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 720px) {
+  .elegir {
+    padding: 38px 0 42px;
+  }
+
+  .elegir::before {
+    background-position: -135px center;
+    background-size: auto 92%;
+    opacity: 0.40;
+  }
+
+  .elegir::after {
+    background-position: calc(100% + 135px) center;
+    background-size: auto 92%;
+    opacity: 0.40;
+  }
+
+  .elegir .contenedor::before {
+    top: -38px;
+    bottom: -42px;
+
+    background:
+      rgba(4, 27, 50, 0.78);
+  }
+
+  .rejilla-elegir {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+
+  .icono-elegir {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icono-elegir img {
+    width: 63px;
+    height: 63px;
+  }
+
+  .opcion-elegir {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .rejilla-elegir {
+    grid-template-columns: 1fr;
+    gap: 31px;
+  }
+
+  .icono-elegir {
+    width: 112px;
+    height: 112px;
+  }
+
+  .icono-elegir img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .opcion-elegir {
+    font-size: 14px;
+  }
 }
     /* PROCESO */
 
