@@ -1205,10 +1205,9 @@
   background: #061c33;
 }
 
-/* Avión del lado izquierdo */
+/* AVIÓN IZQUIERDO */
 .elegir::before {
   content: "";
-
   position: absolute;
   inset: 0;
   z-index: -3;
@@ -1218,20 +1217,19 @@
 
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: auto 125%;
+  background-size: auto 118%;
 
-  opacity: 0.82;
+  opacity: 0.95;
 
   filter:
-    brightness(0.72)
-    contrast(1.08)
-    saturate(0.82);
+    brightness(0.82)
+    contrast(1.06)
+    saturate(0.92);
 }
 
-/* Avión del lado derecho */
+/* AVIÓN DERECHO */
 .elegir::after {
   content: "";
-
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -1241,16 +1239,15 @@
 
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: auto 125%;
+  background-size: auto 118%;
 
-  opacity: 0.82;
+  opacity: 1;
 
   filter:
-    brightness(0.72)
-    contrast(1.08)
-    saturate(0.82);
+    brightness(0.82)
+    contrast(1.06)
+    saturate(0.92);
 }
-
 /* Capa para oscurecer el centro sin ocultar los aviones */
 .elegir .contenedor {
   position: relative;
@@ -1262,9 +1259,9 @@
 
   position: absolute;
   top: -42px;
-  right: -10vw;
+  right: -18vw;
   bottom: -48px;
-  left: -10vw;
+  left: -18vw;
 
   z-index: -1;
   pointer-events: none;
@@ -1272,21 +1269,23 @@
   background:
     linear-gradient(
       90deg,
-      rgba(5, 25, 45, 0.28) 0%,
-      rgba(5, 25, 45, 0.62) 17%,
-      rgba(5, 25, 45, 0.94) 36%,
-      rgba(5, 25, 45, 0.98) 50%,
-      rgba(5, 25, 45, 0.94) 64%,
-      rgba(5, 25, 45, 0.62) 83%,
-      rgba(5, 25, 45, 0.28) 100%
+      rgba(4, 25, 45, 0.08) 0%,
+      rgba(4, 25, 45, 0.18) 10%,
+      rgba(4, 25, 45, 0.48) 23%,
+      rgba(4, 25, 45, 0.82) 36%,
+      rgba(4, 25, 45, 0.97) 47%,
+      rgba(4, 25, 45, 0.97) 53%,
+      rgba(4, 25, 45, 0.82) 64%,
+      rgba(4, 25, 45, 0.48) 77%,
+      rgba(4, 25, 45, 0.18) 90%,
+      rgba(4, 25, 45, 0.08) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(1, 13, 27, 0.20),
-      rgba(1, 13, 27, 0.36)
+      rgba(2, 15, 29, 0.12),
+      rgba(2, 15, 29, 0.28)
     );
 }
-
 /* Título */
 
 .elegir .titulo-seccion {
