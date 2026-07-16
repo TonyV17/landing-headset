@@ -1661,6 +1661,12 @@ footer {
       font-size: 22px;
       font-weight: 900;
     }
+    .icono-whatsapp{
+    width:36px;
+    height:36px;
+}
+    object-fit:contain;
+}
 
     /* TABLET */
 
@@ -2866,15 +2872,19 @@ footer {
   </footer>
 
   <!-- WHATSAPP FLOTANTE -->
-  <a
+ <a
     class="whatsapp-flotante"
-    href="https://wa.me/51920643518?text=Hola%20RTV%2C%20quiero%20información%20sobre%20la%20reparación%20de%20mi%20headset"
+    href="https://wa.me/51920643518?text=Hola%20RTV..."
     target="_blank"
     rel="noopener"
     aria-label="Contactar por WhatsApp"
-  >
-    ☎
-  </a>
+>
+    <img
+        src="./logowsp.png"
+        alt="WhatsApp"
+        class="icono-whatsapp"
+    >
+</a>
 
   <script>
     const preguntas = document.querySelectorAll(".pregunta");
