@@ -1187,134 +1187,118 @@
   line-height: 1.45;
 }
 
-    /* POR QUÉ ELEGIR */
-
-    /* =========================================
+    /* ==========================================
    SECCIÓN: ¿POR QUÉ ELEGIR RTV?
-========================================= */
+========================================== */
 
 .elegir {
   position: relative;
-  min-height: 330px;
+  min-height: 360px;
   overflow: hidden;
   isolation: isolate;
 
-  padding: 42px 0 48px;
+  padding: 46px 0 52px;
 
   color: #ffffff;
-  background: #061c33;
+  background-color: #061b31;
 }
 
-/* AVIÓN IZQUIERDO */
+/* Imagen original con los dos aviones */
 .elegir::before {
   content: "";
+
   position: absolute;
   inset: 0;
   z-index: -3;
 
   background-image:
-    url("./AVIÓNCSNA1ELEGIR.png");
+    url("./fondo de aviones para por qué elegir.png");
 
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: auto 118%;
-
-  opacity: 0.95;
 
   filter:
-    brightness(0.82)
-    contrast(1.06)
-    saturate(0.92);
+    brightness(0.95)
+    contrast(1.08)
+    saturate(0.88);
+
+  transform: scale(1.015);
 }
 
-/* AVIÓN DERECHO */
+/*
+  Capa de oscurecimiento:
+  - extremos más claros para ver los aviones;
+  - centro más oscuro para leer el contenido.
+*/
 .elegir::after {
   content: "";
+
   position: absolute;
   inset: 0;
   z-index: -2;
 
-  background-image:
-    url("./AVIÓNCSNA2ELEGIR.png");
-
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: auto 118%;
-
-  opacity: 1;
-
-  filter:
-    brightness(0.82)
-    contrast(1.06)
-    saturate(0.92);
-}
-/* Capa para oscurecer el centro sin ocultar los aviones */
-.elegir .contenedor {
-  position: relative;
-  z-index: 2;
-}
-
-.elegir .contenedor::before {
-  content: "";
-
-  position: absolute;
-  top: -42px;
-  right: -18vw;
-  bottom: -48px;
-  left: -18vw;
-
-  z-index: -1;
   pointer-events: none;
 
   background:
     linear-gradient(
       90deg,
-      rgba(4, 25, 45, 0.08) 0%,
-      rgba(4, 25, 45, 0.18) 10%,
-      rgba(4, 25, 45, 0.48) 23%,
-      rgba(4, 25, 45, 0.82) 36%,
-      rgba(4, 25, 45, 0.97) 47%,
-      rgba(4, 25, 45, 0.97) 53%,
-      rgba(4, 25, 45, 0.82) 64%,
-      rgba(4, 25, 45, 0.48) 77%,
-      rgba(4, 25, 45, 0.18) 90%,
-      rgba(4, 25, 45, 0.08) 100%
+      rgba(3, 19, 36, 0.25) 0%,
+      rgba(3, 19, 36, 0.36) 10%,
+      rgba(3, 19, 36, 0.60) 24%,
+      rgba(3, 19, 36, 0.86) 37%,
+      rgba(3, 19, 36, 0.96) 47%,
+      rgba(3, 19, 36, 0.96) 53%,
+      rgba(3, 19, 36, 0.86) 63%,
+      rgba(3, 19, 36, 0.60) 76%,
+      rgba(3, 19, 36, 0.36) 90%,
+      rgba(3, 19, 36, 0.25) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(2, 15, 29, 0.12),
-      rgba(2, 15, 29, 0.28)
+      rgba(2, 15, 29, 0.18) 0%,
+      rgba(2, 15, 29, 0.30) 100%
     );
 }
+
+/* El contenido debe quedar por encima de las capas */
+.elegir .contenedor {
+  position: relative;
+  z-index: 2;
+}
+
 /* Título */
 
 .elegir .titulo-seccion {
-  margin: 0 0 35px;
+  margin: 0 0 36px;
 
   color: #ffffff;
 
-  font-size: clamp(24px, 2.1vw, 34px);
+  font-size: clamp(25px, 2.3vw, 36px);
   line-height: 1.1;
   font-weight: 900;
 
-  letter-spacing: -0.4px;
+  letter-spacing: -0.6px;
 
   text-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.55);
+    0 3px 13px rgba(0, 0, 0, 0.75);
 }
 
 .elegir .titulo-seccion span {
   color: var(--rojo);
 }
 
-/* Rejilla de beneficios */
+/* Distribución de los cinco beneficios */
 
 .rejilla-elegir {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(5, minmax(145px, 1fr));
+  grid-template-columns: repeat(5, minmax(135px, 1fr));
   align-items: start;
 
-  gap: clamp(22px, 3vw, 55px);
+  gap: clamp(20px, 2.8vw, 52px);
 
   text-align: center;
 }
@@ -1322,16 +1306,17 @@
 /* Cada beneficio */
 
 .opcion-elegir {
+  position: relative;
   min-width: 0;
 
   color: #ffffff;
 
-  font-size: clamp(11px, 0.9vw, 14px);
-  line-height: 1.35;
-  font-weight: 700;
+  font-size: clamp(12px, 0.9vw, 14px);
+  line-height: 1.4;
+  font-weight: 800;
 
   text-shadow:
-    0 2px 7px rgba(0, 0, 0, 0.65);
+    0 2px 8px rgba(0, 0, 0, 0.78);
 }
 
 /* Círculo exterior */
@@ -1339,10 +1324,10 @@
 .icono-elegir {
   position: relative;
 
-  width: 104px;
-  height: 104px;
+  width: 108px;
+  height: 108px;
 
-  margin: 0 auto 17px;
+  margin: 0 auto 18px;
 
   display: flex;
   align-items: center;
@@ -1354,14 +1339,14 @@
   background:
     radial-gradient(
       circle,
-      rgba(16, 61, 96, 0.36) 0%,
-      rgba(4, 28, 51, 0.62) 65%,
-      rgba(3, 20, 38, 0.82) 100%
+      rgba(12, 54, 91, 0.52) 0%,
+      rgba(4, 28, 52, 0.72) 66%,
+      rgba(2, 18, 35, 0.88) 100%
     );
 
   box-shadow:
-    inset 0 0 20px rgba(24, 112, 177, 0.10),
-    0 0 14px rgba(0, 0, 0, 0.30);
+    inset 0 0 22px rgba(36, 129, 197, 0.12),
+    0 0 18px rgba(0, 0, 0, 0.34);
 
   transition:
     transform 0.3s ease,
@@ -1369,41 +1354,41 @@
     box-shadow 0.3s ease;
 }
 
-/* Segundo círculo interior */
+/* Círculo interior decorativo */
 
 .icono-elegir::before {
   content: "";
 
   position: absolute;
-  inset: 17px;
+  inset: 18px;
 
-  border: 1px solid rgba(229, 37, 43, 0.68);
+  border: 1px solid rgba(229, 37, 43, 0.72);
   border-radius: 50%;
 
   pointer-events: none;
 }
 
-/* Imagen de cada beneficio */
+/* Archivos de íconos */
 
 .icono-elegir img {
   position: relative;
   z-index: 2;
 
-  width: 66px;
-  height: 66px;
+  width: 67px;
+  height: 67px;
 
   object-fit: contain;
 
   filter:
-    drop-shadow(0 0 4px rgba(71, 176, 255, 0.28))
-    drop-shadow(0 0 6px rgba(229, 37, 43, 0.16));
+    drop-shadow(0 0 5px rgba(68, 176, 255, 0.32))
+    drop-shadow(0 0 7px rgba(229, 37, 43, 0.18));
 
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
 }
 
-/* Línea roja debajo del texto */
+/* Línea roja inferior */
 
 .opcion-elegir::after {
   content: "";
@@ -1413,32 +1398,32 @@
   width: 48px;
   height: 2px;
 
-  margin: 15px auto 0;
+  margin: 16px auto 0;
 
   background: var(--rojo);
 
   box-shadow:
-    0 0 6px rgba(229, 37, 43, 0.35);
+    0 0 7px rgba(229, 37, 43, 0.42);
 }
 
-/* Efectos hover */
+/* Movimiento al pasar el cursor */
 
 .opcion-elegir:hover .icono-elegir {
   transform: translateY(-6px);
 
-  border-color: #ff3440;
+  border-color: #ff3a45;
 
   box-shadow:
-    inset 0 0 24px rgba(24, 112, 177, 0.16),
-    0 0 22px rgba(229, 37, 43, 0.18);
+    inset 0 0 24px rgba(36, 129, 197, 0.18),
+    0 0 24px rgba(229, 37, 43, 0.20);
 }
 
 .opcion-elegir:hover .icono-elegir img {
   transform: scale(1.08);
 
   filter:
-    drop-shadow(0 0 6px rgba(71, 176, 255, 0.38))
-    drop-shadow(0 0 8px rgba(229, 37, 43, 0.25));
+    drop-shadow(0 0 7px rgba(68, 176, 255, 0.42))
+    drop-shadow(0 0 9px rgba(229, 37, 43, 0.26));
 }
 
 /* TABLET */
@@ -1446,17 +1431,28 @@
 @media (max-width: 1050px) {
   .elegir {
     min-height: auto;
+    padding: 44px 0 48px;
   }
 
-  .elegir::before,
+  .elegir::before {
+    background-size: auto 100%;
+  }
+
   .elegir::after {
-    background-size: auto 105%;
-    opacity: 0.62;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 19, 36, 0.38) 0%,
+        rgba(3, 19, 36, 0.78) 25%,
+        rgba(3, 19, 36, 0.94) 50%,
+        rgba(3, 19, 36, 0.78) 75%,
+        rgba(3, 19, 36, 0.38) 100%
+      );
   }
 
   .rejilla-elegir {
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px 24px;
+    gap: 36px 24px;
   }
 }
 
@@ -1464,42 +1460,42 @@
 
 @media (max-width: 720px) {
   .elegir {
-    padding: 38px 0 42px;
+    padding: 39px 0 44px;
   }
 
   .elegir::before {
-    background-position: -135px center;
-    background-size: auto 92%;
-    opacity: 0.40;
+    background-position: center center;
+    background-size: auto 100%;
+
+    filter:
+      brightness(0.68)
+      contrast(1.06)
+      saturate(0.82);
   }
 
   .elegir::after {
-    background-position: calc(100% + 135px) center;
-    background-size: auto 92%;
-    opacity: 0.40;
+    background:
+      rgba(3, 21, 40, 0.82);
   }
 
-  .elegir .contenedor::before {
-    top: -38px;
-    bottom: -42px;
-
-    background:
-      rgba(4, 27, 50, 0.78);
+  .elegir .titulo-seccion {
+    margin-bottom: 32px;
+    font-size: 25px;
   }
 
   .rejilla-elegir {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 16px;
+    gap: 34px 16px;
   }
 
   .icono-elegir {
-    width: 100px;
-    height: 100px;
+    width: 102px;
+    height: 102px;
   }
 
   .icono-elegir img {
-    width: 63px;
-    height: 63px;
+    width: 64px;
+    height: 64px;
   }
 
   .opcion-elegir {
@@ -1507,10 +1503,16 @@
   }
 }
 
+/* CELULAR PEQUEÑO */
+
 @media (max-width: 450px) {
+  .elegir::before {
+    background-size: auto 92%;
+  }
+
   .rejilla-elegir {
     grid-template-columns: 1fr;
-    gap: 31px;
+    gap: 32px;
   }
 
   .icono-elegir {
@@ -2578,91 +2580,96 @@ footer {
 </section>
 
     <!-- POR QUÉ ELEGIR -->
-    <section class="elegir">
+<section class="elegir">
 
-      <div class="contenedor">
+  <div class="contenedor">
 
-        <h2 class="titulo-seccion titulo-blanco">
-          ¿Por qué elegir <span>RTV</span>?
-        </h2>
+    <h2 class="titulo-seccion titulo-blanco">
+      ¿Por qué elegir <span>RTV</span>?
+    </h2>
 
-        <div class="rejilla-elegir">
+    <div class="rejilla-elegir">
 
-          <article class="opcion-elegir">
+      <!-- ESPECIALIZACIÓN -->
+      <article class="opcion-elegir">
 
-    <div class="icono-elegir">
-        <img
+        <div class="icono-elegir">
+          <img
             src="./ESPECIALIZACIÓN ELEGIR.png"
             alt="Especialización en equipos aeronáuticos"
-        >
-    </div>
-
-    Especialización en<br>
-    equipos aeronáuticos
-
-</article>
-
-          <article class="opcion-elegir">
-
-    <div class="icono-elegir">
-        <img
-            src="./TÉCNICOS ELEGIR.png"
-            alt="Técnicos capacitados"
-        >
-    </div>
-
-    Técnicos capacitados<br>
-    en estándares de aviación
-
-</article>
-
-          <article class="opcion-elegir">
-
-    <div class="icono-elegir">
-        <img
-            src="./REPUESTO ELEGIR.png"
-            alt="Repuestos de alta calidad"
-        >
-    </div>
-
-    Repuestos de alta<br>
-    calidad y compatibilidad
-
-</article>
-
-          <article class="opcion-elegir">
-
-    <div class="icono-elegir">
-        <img
-            src="./GARANTÍA ELEGIR.png"
-            alt="Garantía"
-        >
-    </div>
-
-    Garantía en todas<br>
-    nuestras reparaciones
-
-</article>
-
-          <article class="opcion-elegir">
-
-    <div class="icono-elegir">
-        <img
-            src="./ATENCIÓN ELEGIR1.png"
-            alt="Atención rápida"
-        >
-    </div>
-
-    Atención rápida y<br>
-    asesoría profesional
-
-</article>
-
+          >
         </div>
 
-      </div>
+        Especialización en<br>
+        equipos aeronáuticos
 
-    </section>
+      </article>
+
+      <!-- TÉCNICOS -->
+      <article class="opcion-elegir">
+
+        <div class="icono-elegir">
+          <img
+            src="./TÉCNICOS ELEGIR.png"
+            alt="Técnicos capacitados en aviación"
+          >
+        </div>
+
+        Técnicos capacitados<br>
+        en estándares de aviación
+
+      </article>
+
+      <!-- REPUESTOS -->
+      <article class="opcion-elegir">
+
+        <div class="icono-elegir">
+          <img
+            src="./REPUESTO ELEGIR.png"
+            alt="Repuestos de alta calidad"
+          >
+        </div>
+
+        Repuestos de alta<br>
+        calidad y compatibilidad
+
+      </article>
+
+      <!-- GARANTÍA -->
+      <article class="opcion-elegir">
+
+        <div class="icono-elegir">
+          <img
+            src="./GARANTÍA ELEGIR.png"
+            alt="Garantía en todas las reparaciones"
+          >
+        </div>
+
+        Garantía en todas<br>
+        nuestras reparaciones
+
+      </article>
+
+      <!-- ATENCIÓN -->
+      <article class="opcion-elegir">
+
+        <div class="icono-elegir">
+          <img
+            src="./ATENCIÓN ELEGIR1.png"
+            alt="Atención rápida y asesoría profesional"
+          >
+        </div>
+
+        Atención rápida y<br>
+        asesoría profesional
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- PROCESO -->
     <section class="seccion proceso" id="proceso">
