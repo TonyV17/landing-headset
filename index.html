@@ -17,18 +17,25 @@
 
   <style>
     :root {
-      --azul: #061a2e;
-      --azul-medio: #092844;
-      --rojo: #e5252b;
-      --verde: #19b85b;
-      --blanco: #ffffff;
-      --texto: #172235;
-      --gris: #697586;
-      --fondo: #f8fafc;
-      --borde: #e0e6ed;
-      --sombra: 0 7px 20px rgba(6, 27, 49, 0.11);
-    }
+  --azul: #031a33;
+  --azul-medio: #062747;
 
+  /* Conservamos el nombre para no modificar selectores.
+     Ahora esta variable contiene el azul eléctrico del logo. */
+  --rojo: #087cf0;
+
+  --azul-electrico: #087cf0;
+  --azul-brillante: #1593ff;
+  --azul-claro: #eaf4ff;
+
+  --verde: #19b85b;
+  --blanco: #ffffff;
+  --texto: #102745;
+  --gris: #607086;
+  --fondo: #f4f8fc;
+  --borde: #dce6f0;
+  --sombra: 0 7px 20px rgba(3, 26, 51, 0.11);
+}
     * {
       box-sizing: border-box;
     }
@@ -104,13 +111,18 @@
     }
 
     .boton-rojo {
-      color: #ffffff;
-      background: var(--rojo);
-    }
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      var(--azul-electrico),
+      var(--azul-brillante)
+    );
+}
 
-    .boton-rojo:hover {
-      box-shadow: 0 9px 25px rgba(229, 37, 43, 0.36);
-    }
+.boton-rojo:hover {
+  box-shadow: 0 9px 25px rgba(8, 124, 240, 0.36);
+}
 
     .boton-oscuro {
       color: #ffffff;
@@ -129,7 +141,7 @@
       height: 20px;
       display: inline-grid;
       place-items: center;
-      border: 2px solid currentColor;
+      border: 2px solid var(--azul-electrico);
       border-radius: 50%;
       font-size: 10px;
     }
@@ -634,7 +646,7 @@
 
 .fallas {
   overflow: hidden;
-  background: #f7f9fc;
+  background: var(--fondo);
 }
 
 .fallas .titulo-seccion {
@@ -694,11 +706,11 @@
 
 .tarjeta-falla:hover {
   transform: translateY(-7px);
-  border-color: rgba(229, 37, 43, 0.4);
+  border-color: rgba(8, 124, 240, 0.4);
 
   box-shadow:
     0 16px 32px rgba(7, 30, 54, 0.14),
-    0 0 18px rgba(229, 37, 43, 0.08);
+    0 0 18px rgba(8, 124, 240, 0.12);
 }
 
 .tarjeta-falla img {
@@ -763,7 +775,8 @@
   border-radius: 50%;
 
   color: #ffffff;
-  background: var(--azul);
+  background: var(--azul-electrico);
+}
 
   box-shadow: 0 7px 20px rgba(6, 27, 49, 0.25);
 
@@ -779,7 +792,7 @@
 }
 
 .control-fallas:hover {
-  background: var(--rojo);
+  background: #066dd3;
   transform: translateY(-50%) scale(1.06);
 }
 
@@ -806,7 +819,7 @@
   border: 0;
   border-radius: 50%;
 
-  background: #c5ccd5;
+  background: #c7d4e2;
   cursor: pointer;
 
   transition:
@@ -818,7 +831,7 @@
 .indicador-falla.activo {
   width: 28px;
   border-radius: 12px;
-  background: var(--rojo);
+  background: var(--azul-electrico);
 }
 
 @media (max-width: 1050px) {
@@ -983,7 +996,7 @@
   border-radius: 50%;
 
   color: #ffffff;
-  background: var(--azul);
+  background: var(--azul-electrico);
 
   box-shadow: 0 7px 20px rgba(6, 27, 49, 0.25);
 
@@ -998,7 +1011,7 @@
 }
 
 .control-carrusel:hover {
-  background: var(--rojo);
+  background: #066dd3;
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -1037,7 +1050,7 @@
 .indicador-servicio.activo {
   width: 26px;
   border-radius: 10px;
-  background: var(--rojo);
+  background: var(--azul-electrico);
 }
 
 @media (max-width: 1050px) {
@@ -1288,7 +1301,7 @@
   position: absolute;
   inset: 18px;
 
-  border: 1px solid rgba(229, 37, 43, 0.72);
+  border: 1px solid rgba(8, 124, 240, 0.72);
   border-radius: 50%;
 
   pointer-events: none;
@@ -1306,8 +1319,8 @@
   object-fit: contain;
 
   filter:
-    drop-shadow(0 0 5px rgba(68, 176, 255, 0.32))
-    drop-shadow(0 0 7px rgba(229, 37, 43, 0.18));
+  drop-shadow(0 0 5px rgba(68, 176, 255, 0.32))
+  drop-shadow(0 0 7px rgba(8, 124, 240, 0.22));
 
   transition:
     transform 0.3s ease,
@@ -1326,10 +1339,10 @@
 
   margin: 16px auto 0;
 
-  background: var(--rojo);
+  background: var(--azul-electrico);
 
   box-shadow:
-    0 0 7px rgba(229, 37, 43, 0.42);
+    0 0 7px rgba(8, 124, 240, 0.42);
 }
 
 /* Movimiento al pasar el cursor */
@@ -1337,11 +1350,11 @@
 .opcion-elegir:hover .icono-elegir {
   transform: translateY(-6px);
 
-  border-color: #ff3a45;
+  border-color: var(--azul-brillante);
 
   box-shadow:
     inset 0 0 24px rgba(36, 129, 197, 0.18),
-    0 0 24px rgba(229, 37, 43, 0.20);
+    0 0 24px rgba(8, 124, 240, 0.24);
 }
 
 .opcion-elegir:hover .icono-elegir img {
@@ -1349,7 +1362,7 @@
 
   filter:
     drop-shadow(0 0 7px rgba(68, 176, 255, 0.42))
-    drop-shadow(0 0 9px rgba(229, 37, 43, 0.26));
+    drop-shadow(0 0 9px rgba(8, 124, 240, 0.30));
 }
 
 /* TABLET */
@@ -1490,7 +1503,7 @@
       display: grid;
       place-items: center;
       color: #ffffff;
-      background: var(--rojo);
+      background: var(--azul-electrico);
       border-radius: 50%;
       font-size: 12px;
       font-weight: 900;
@@ -1600,11 +1613,11 @@
   background:
     linear-gradient(
       90deg,
-      var(--rojo) 0 43%,
+      var(--azul-electrico) 0 43%,
       transparent 43% 48%,
-      var(--rojo) 48% 52%,
+      var(--azul-electrico) 48% 52%,
       transparent 52% 57%,
-      var(--rojo) 57% 100%
+      var(--azul-electrico) 57% 100%
     );
 }
 
