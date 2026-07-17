@@ -197,14 +197,18 @@
   position: relative;
   z-index: 20;
 
-  min-height: 120px;
+   min-height:145px;
 
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+    display:grid;
+  background:#ffffff;
 
-  gap: 34px;
-  padding-top: 7px;
+border-radius:14px;
+
+padding:0 25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.10);
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
 }
 
 .marca {
@@ -213,11 +217,15 @@
   flex-shrink: 0;
 }
 
-.marca img {
-  width: 480px;
-  height: 130px;
-  object-fit: contain;
-  object-position: left center;
+.marca img{
+
+    width:620px;
+    height:auto;
+
+    object-fit:contain;
+    object-position:left center;
+
+    transition:.3s;
 }
 
 .marca-texto {
@@ -235,21 +243,22 @@
 }
 
 .menu-principal a {
+
   position: relative;
 
   padding: 13px 0;
 
-  color: rgba(255, 255, 255, 0.92);
+  color: #08284c;
 
   font-size: clamp(14px, 1.05vw, 18px);
   line-height: 1;
-  font-weight: 600;
+  font-weight: 700;
 
   white-space: nowrap;
 
   transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+    color .25s ease,
+    transform .25s ease;
 }
 
 .menu-principal a::after {
@@ -262,7 +271,10 @@
   width: 100%;
   height: 2px;
 
-  background: #0877f2;
+  background:#ffffff;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
 
   transform: scaleX(0);
   transform-origin: center;
@@ -271,10 +283,12 @@
 }
 
 .menu-principal a:hover {
-  color: #ffffff;
-  transform: translateY(-1px);
-}
 
+  color:#087cf0;
+
+  transform:translateY(-1px);
+
+}
 .menu-principal a:hover::after {
   transform: scaleX(1);
 }
@@ -2782,11 +2796,7 @@ footer {
     </button>
 
     <!-- MENÚ -->
-    <div
-      <div
-  class="menu-principal"
-  id="menu-principal"
->
+    <div class="menu-principal" id="menu-principal">
   <a href="#servicios">
     Servicios
   </a>
