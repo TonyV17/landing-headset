@@ -2794,6 +2794,101 @@ footer {
     display: none;
   }
 }
+    /* =========================================
+   CORRECCIÓN DEFINITIVA DEL LOGO DEL HEADER
+========================================= */
+
+/* Escritorio */
+.navegacion {
+  min-height: 96px;
+  padding: 8px 28px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marca img {
+  display: block;
+
+  width: clamp(300px, 24vw, 430px);
+  height: auto;
+  max-height: 80px;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Tablet */
+@media (max-width: 1180px) {
+  .navegacion {
+    min-height: 88px;
+    padding: 7px 22px;
+    gap: 22px;
+  }
+
+  .marca img {
+    width: clamp(250px, 31vw, 340px);
+    height: auto;
+    max-height: 72px;
+  }
+}
+
+/* Menú móvil */
+@media (max-width: 920px) {
+  .navegacion {
+    min-height: 82px;
+    padding: 7px 18px;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .marca {
+    min-width: 0;
+  }
+
+  .marca img {
+    width: clamp(210px, 48vw, 290px);
+    height: auto;
+    max-height: 66px;
+  }
+}
+
+/* Celular */
+@media (max-width: 720px) {
+  .navegacion {
+    min-height: 78px;
+    padding: 7px 14px;
+  }
+
+  .marca img {
+    width: clamp(200px, 58vw, 270px);
+    height: auto;
+    max-height: 62px;
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 420px) {
+  .navegacion {
+    min-height: 74px;
+    padding: 6px 12px;
+  }
+
+  .marca img {
+    width: clamp(190px, 60vw, 235px);
+    height: auto;
+    max-height: 58px;
+  }
+}
   </style>
 </head>
 
