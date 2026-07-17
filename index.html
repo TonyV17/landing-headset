@@ -587,80 +587,6 @@
   }
 }
 
-/* CELULAR */
-
-@media (max-width: 650px) {
-  .hero {
-    min-height: 720px;
-  }
-
-  .hero::before {
-    background-position: center center;
-  }
-
-  .navegacion {
-    min-height: 74px;
-    padding-top: 4px;
-  }
-
-  .marca img {
-    width: 175px;
-    height: 57px;
-  }
-
-  .menu-principal {
-    top: 73px;
-  }
-
-  .contenido-hero {
-    min-height: 635px;
-  }
-
-  .texto-hero {
-    margin-top: 76px;
-    padding-inline: 0;
-  }
-
-  .texto-hero h1 {
-    letter-spacing: -0.8px;
-  }
-
-  .texto-hero h1 .linea-1 {
-    font-size: 28px;
-  }
-
-  .texto-hero h1 .linea-2 {
-    font-size: 37px;
-  }
-
-  .texto-hero h1 .linea-3 {
-    font-size: 40px;
-  }
-
-  .texto-hero h2 {
-    max-width: 92%;
-    font-size: 16px;
-  }
-
-  .texto-hero p {
-    max-width: 90%;
-    font-size: 14px;
-  }
-
-  .acciones-hero {
-    flex-direction: column;
-    align-items: center;
-
-    gap: 13px;
-  }
-
-  .acciones-hero .boton {
-    width: min(300px, 100%);
-    min-height: 56px;
-
-    font-size: 15px;
-  }
-}
     /* MARCAS */
 
     .marcas {
@@ -1930,11 +1856,10 @@ footer {
       font-size: 22px;
       font-weight: 900;
     }
-    .icono-whatsapp{
-    width:36px;
-    height:36px;
-}
-    object-fit:contain;
+    .icono-whatsapp {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
     /* TABLET */
@@ -2127,6 +2052,456 @@ footer {
        font-size: 15px;
       }
     }
+    /* =========================================
+   ADAPTACIÓN DEFINITIVA PARA CELULAR
+========================================= */
+
+@media (max-width: 720px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .contenedor {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* PORTADA */
+
+  .hero {
+    min-height: 790px;
+    background-color: #031426;
+  }
+
+  .hero::before {
+    background-image:
+      url("./fondo-headsets-mobile.png");
+
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(1, 12, 24, 0.05) 0%,
+        rgba(1, 12, 24, 0.08) 30%,
+        rgba(1, 12, 24, 0.38) 49%,
+        rgba(1, 12, 24, 0.82) 66%,
+        rgba(1, 12, 24, 0.98) 100%
+      );
+  }
+
+  /* CABECERA */
+
+  .navegacion {
+    min-height: 68px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .marca img {
+    width: 160px;
+    height: 48px;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .boton-menu {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+  }
+
+  .boton-cabecera {
+    display: none;
+  }
+
+  .menu-principal {
+    top: 68px;
+    left: 18px;
+    right: 18px;
+    width: auto;
+    padding: 10px;
+  }
+
+  .menu-principal.abierto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .menu-principal a {
+    width: 100%;
+    padding: 15px 12px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* CONTENIDO DE LA PORTADA */
+
+  .contenido-hero {
+    min-height: 722px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .texto-hero {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 0 30px;
+    text-align: center;
+  }
+
+  .texto-hero h1 {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.5px;
+  }
+
+  .texto-hero h1 .linea-1 {
+    font-size: 23px;
+    line-height: 1.08;
+  }
+
+  .texto-hero h1 .linea-2 {
+    margin-top: 3px;
+    font-size: 31px;
+    line-height: 1.05;
+  }
+
+  .texto-hero h1 .linea-3 {
+    margin-top: 3px;
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  .texto-hero h2 {
+    max-width: 340px;
+    margin: 15px auto 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .texto-hero h2 br {
+    display: none;
+  }
+
+  .texto-hero p {
+    max-width: 330px;
+    margin: 9px auto 0;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .acciones-hero {
+    width: 100%;
+    margin-top: 21px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .acciones-hero .boton {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .acciones-hero .boton img {
+    width: 27px;
+    height: 27px;
+  }
+
+  /* SECCIONES GENERALES */
+
+  .seccion {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .titulo-seccion {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  /* MARCAS */
+
+  .rejilla-marcas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  .rejilla-marcas img {
+    width: 100%;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .logo-pilot {
+    font-size: 22px;
+  }
+
+  .aviso-marcas {
+    margin-top: 24px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  /* FALLAS */
+
+  .pista-fallas .tarjeta-falla {
+    flex-basis: 100%;
+  }
+
+  .tarjeta-falla {
+    min-height: 250px;
+    margin: 0;
+  }
+
+  .control-fallas {
+    width: 40px;
+    height: 40px;
+  }
+
+  .control-fallas.anterior {
+    left: 5px;
+  }
+
+  .control-fallas.siguiente {
+    right: 5px;
+  }
+
+  /* SERVICIOS */
+
+  .pista-servicios .servicio {
+    flex-basis: 100%;
+  }
+
+  .servicio img {
+    height: 230px;
+  }
+
+  .servicio-contenido {
+    padding: 16px 15px 18px;
+  }
+
+  .servicio h3 {
+    font-size: 16px;
+  }
+
+  .servicio p {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  /* POR QUÉ ELEGIR */
+
+  .elegir {
+    padding: 44px 0 48px;
+  }
+
+  .elegir::before {
+    background-image:
+      url("./fondo-aviones-mobile.png");
+
+    background-position: center top;
+    background-size: cover;
+
+    filter:
+      brightness(0.72)
+      contrast(1.05)
+      saturate(0.88);
+
+    transform: none;
+  }
+
+  .elegir::after {
+    background: rgba(3, 21, 40, 0.78);
+  }
+
+  .rejilla-elegir {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 14px;
+  }
+
+  .icono-elegir {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 14px;
+  }
+
+  .icono-elegir img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .opcion-elegir {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* PROCESO */
+
+  .rejilla-proceso {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .paso {
+    min-height: 145px;
+    padding: 27px 18px 18px;
+  }
+
+  .paso h3 {
+    font-size: 16px;
+  }
+
+  .paso p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .flecha {
+    display: none;
+  }
+
+  /* CLIENTES */
+
+  .clientes {
+    min-height: auto;
+    padding: 44px 0;
+  }
+
+  .clientes::before {
+    background-position: 28% center;
+    background-size: cover;
+  }
+
+  .rejilla-clientes {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 12px;
+  }
+
+  .cliente {
+    padding: 0 4px 8px;
+  }
+
+  .cliente:not(:last-child)::after {
+    display: none;
+  }
+
+  .cliente-icono {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cliente-icono img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .cliente h3 {
+    font-size: 16px;
+  }
+
+  .cliente p {
+    font-size: 12px;
+  }
+
+  /* PREGUNTAS */
+
+  .rejilla-preguntas {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pregunta {
+    padding: 0 15px;
+  }
+
+  .pregunta summary {
+    padding: 16px 28px 16px 0;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .pregunta p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* PIE DE PÁGINA */
+
+  .rejilla-footer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .logo-footer img {
+    width: 150px;
+  }
+
+  .logo-footer p {
+    font-size: 11px;
+  }
+
+  .columna-footer h3 {
+    font-size: 14px;
+  }
+
+  .columna-footer p,
+  .columna-footer a {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .derechos {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  /* WHATSAPP FLOTANTE */
+
+  .whatsapp-flotante {
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+  }
+}
   </style>
 </head>
 
@@ -2165,27 +2540,28 @@ footer {
 
     <!-- MENÚ -->
     <div
-      class="menu-principal"
-      id="menu-principal"
-    >
-      <a href="#servicios">
-        Servicios
-      </a>
-
-      <a href="#equipos">
-        Equipos que reparamos
-      </a>
-
-      <a href="#proceso">
-        Proceso
-      </a>
-
-      <a href="#servicios">
+      <div
+  class="menu-principal"
+  id="menu-principal"
+>
   <a href="#servicios">
-  Trabajos realizados
-</a>
+    Servicios
+  </a>
 
-  </nav>
+  <a href="#equipos">
+    Equipos que reparamos
+  </a>
+
+  <a href="#proceso">
+    Proceso
+  </a>
+
+  <a href="#trabajos">
+    Trabajos realizados
+  </a>
+</div>
+
+</nav>
 
   <div class="contenido-hero contenedor">
 
@@ -3161,6 +3537,32 @@ footer {
 </a>
 
   <script>
+    const botonMenu = document.querySelector(".boton-menu");
+const menuPrincipal = document.querySelector(".menu-principal");
+
+botonMenu.addEventListener("click", () => {
+  const menuAbierto =
+    menuPrincipal.classList.toggle("abierto");
+
+  botonMenu.setAttribute(
+    "aria-expanded",
+    menuAbierto ? "true" : "false"
+  );
+
+  botonMenu.textContent =
+    menuAbierto ? "×" : "☰";
+});
+
+menuPrincipal
+  .querySelectorAll("a")
+  .forEach((enlace) => {
+    enlace.addEventListener("click", () => {
+      menuPrincipal.classList.remove("abierto");
+      botonMenu.setAttribute("aria-expanded", "false");
+      botonMenu.textContent = "☰";
+    });
+  });
+    
     const preguntas = document.querySelectorAll(".pregunta");
 
     preguntas.forEach((pregunta) => {
