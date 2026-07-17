@@ -606,34 +606,60 @@
     }
 
     .rejilla-marcas {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      align-items: center;
-      gap: 28px;
-    }
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: center;
+  gap: 18px;
+}
 
-    .rejilla-marcas img {
-      width: 100%;
-      height: 57px;
-      object-fit: contain;
-    }
+.rejilla-marcas img {
+  width: 100%;
+  height: 95px;
+  padding: 12px;
+  object-fit: contain;
+  object-position: center;
+}
+.rejilla-marcas > img,
+.rejilla-marcas > .logo-pilot {
+  width: 100%;
+  min-height: 120px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: #ffffff;
+
+  box-shadow: 0 4px 14px rgba(3, 26, 51, 0.06);
+}
     .logo-pilot {
-      color: #1e2630;
-      text-align: center;
-      font-size: 27px;
-      line-height: 1;
-      font-weight: 900;
-      font-style: italic;
-    }
+  width: 100%;
+  min-height: 120px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #1e2630;
+  text-align: center;
+
+  font-size: 38px;
+  line-height: 0.95;
+  font-weight: 900;
+  font-style: italic;
+}
     .logo-pilot small {
-      display: block;
-      margin-top: 2px;
-      font-size: 7px;
-      font-style: normal;
-      letter-spacing: 0.06em;
-    }
+  display: block;
+  margin-top: 7px;
+
+  font-size: 9px;
+  line-height: 1;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
 
     .aviso-marcas {
       margin: 19px 0 0;
@@ -2267,19 +2293,32 @@ footer {
   /* MARCAS */
 
   .rejilla-marcas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 18px;
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
 
-  .rejilla-marcas img {
-    width: 100%;
-    height: 48px;
-    object-fit: contain;
-  }
+.rejilla-marcas img {
+  width: 100%;
+  height: 76px;
+  padding: 10px;
+  object-fit: contain;
+  object-position: center;
+}
 
-  .logo-pilot {
-    font-size: 22px;
-  }
+.rejilla-marcas > img,
+.rejilla-marcas > .logo-pilot {
+  min-height: 100px;
+}
+
+.logo-pilot {
+  min-height: 100px;
+  font-size: 29px;
+}
+
+.logo-pilot small {
+  margin-top: 5px;
+  font-size: 7px;
+}
 
   .aviso-marcas {
     margin-top: 24px;
@@ -2513,6 +2552,128 @@ footer {
     bottom: 14px;
     width: 52px;
     height: 52px;
+  }
+}
+    /* =========================================
+   LOGOS DE MARCAS MÁS GRANDES Y UNIFORMES
+========================================= */
+
+.marcas {
+  padding-top: 55px;
+  padding-bottom: 45px;
+  background: #ffffff;
+}
+
+.marcas .titulo-seccion {
+  margin-bottom: 34px;
+  font-size: 28px;
+}
+
+.rejilla-marcas {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px;
+}
+
+.rejilla-marcas > img,
+.rejilla-marcas > .logo-pilot {
+  width: 100%;
+  min-height: 120px;
+
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: #ffffff;
+
+  box-shadow: 0 4px 14px rgba(3, 26, 51, 0.06);
+}
+
+.rejilla-marcas img {
+  width: 100%;
+  height: 120px;
+  padding: 14px;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.logo-pilot {
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #1e2630;
+  text-align: center;
+
+  font-size: 38px;
+  line-height: 0.95;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.logo-pilot small {
+  display: block;
+  margin-top: 7px;
+
+  font-size: 9px;
+  line-height: 1;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1050px) {
+  .rejilla-marcas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .rejilla-marcas > img,
+  .rejilla-marcas > .logo-pilot {
+    min-height: 115px;
+  }
+
+  .rejilla-marcas img {
+    height: 115px;
+    padding: 13px;
+  }
+
+  .logo-pilot {
+    min-height: 115px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 720px) {
+  .marcas .titulo-seccion {
+    font-size: 22px;
+  }
+
+  .rejilla-marcas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .rejilla-marcas > img,
+  .rejilla-marcas > .logo-pilot {
+    min-height: 100px;
+  }
+
+  .rejilla-marcas img {
+    height: 100px;
+    padding: 10px;
+  }
+
+  .logo-pilot {
+    min-height: 100px;
+    font-size: 29px;
+  }
+
+  .logo-pilot small {
+    margin-top: 5px;
+    font-size: 7px;
   }
 }
   </style>
