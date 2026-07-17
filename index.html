@@ -738,20 +738,83 @@
     0 16px 32px rgba(7, 30, 54, 0.14),
     0 0 18px rgba(8, 124, 240, 0.12);
 }
+/* =========================================
+   ÍCONOS DE FALLAS UNIFORMES VISUALMENTE
+========================================= */
 
 .tarjeta-falla img {
   width: 105px;
   height: 105px;
   margin: 0 auto 18px;
+
   object-fit: contain;
+  object-position: center;
 
-  transition: transform 0.3s ease;
+  transform-origin: center;
+
+  transition:
+    transform 0.3s ease;
 }
 
-.tarjeta-falla:hover img {
-  transform: scale(1.08);
+/* Tamaño visual individual */
+
+.tarjeta-falla img[alt="No se escucha o volumen bajo"] {
+  transform: scale(1.12);
 }
 
+.tarjeta-falla img[alt="Micrófono no transmite"] {
+  transform: scale(1.14);
+}
+
+.tarjeta-falla img[alt="Cable dañado o cortado"] {
+  transform: scale(1.34);
+}
+
+.tarjeta-falla img[alt="Conector U-174 averiado"] {
+  transform: scale(1.22);
+}
+
+.tarjeta-falla img[alt="Ruido o estática en la comunicación"] {
+  transform: scale(1.16);
+}
+
+.tarjeta-falla img[alt="Auriculares dañados o sin sonido"] {
+  transform: scale(1.18);
+}
+
+.tarjeta-falla img[alt="Diadema rota o suelta"] {
+  transform: scale(1.20);
+}
+
+/* Hover: conserva la escala individual y añade un pequeño aumento */
+
+.tarjeta-falla:hover img[alt="No se escucha o volumen bajo"] {
+  transform: scale(1.18);
+}
+
+.tarjeta-falla:hover img[alt="Micrófono no transmite"] {
+  transform: scale(1.20);
+}
+
+.tarjeta-falla:hover img[alt="Cable dañado o cortado"] {
+  transform: scale(1.40);
+}
+
+.tarjeta-falla:hover img[alt="Conector U-174 averiado"] {
+  transform: scale(1.28);
+}
+
+.tarjeta-falla:hover img[alt="Ruido o estática en la comunicación"] {
+  transform: scale(1.22);
+}
+
+.tarjeta-falla:hover img[alt="Auriculares dañados o sin sonido"] {
+  transform: scale(1.24);
+}
+
+.tarjeta-falla:hover img[alt="Diadema rota o suelta"] {
+  transform: scale(1.26);
+}
 .tarjeta-falla p {
   min-height: 42px;
   margin: 0;
@@ -775,14 +838,20 @@
   place-items: center;
 
   color: var(--azul);
-  font-size: 68px;
+
+  font-size: 58px;
+  line-height: 1;
   font-weight: 900;
 
-  transition: transform 0.3s ease;
+  transform: scale(1.08);
+  transform-origin: center;
+
+  transition:
+    transform 0.3s ease;
 }
 
 .tarjeta-falla:hover .icono-ptt {
-  transform: scale(1.08);
+  transform: scale(1.14);
 }
 
 .control-fallas {
@@ -802,7 +871,6 @@
 
   color: #ffffff;
   background: var(--azul-electrico);
-}
 
   box-shadow: 0 7px 20px rgba(6, 27, 49, 0.25);
 
